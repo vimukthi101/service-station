@@ -19,6 +19,7 @@
 	<link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
   	<link href="css/tools.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body class="home color-green">	<div class="tools">
@@ -68,7 +69,7 @@
 								Monday-Saturday <span class="custom-color">8:30AM - 5:30PM</span>
 							</div>
 							<a href="#" class="appointment" data-toggle="modal" data-target="#appointmentForm">
-                            	<i class="icon-shape icon"></i><span>Appointment</span>
+                            	<i class="fa fa-calendar" aria-hidden="true"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;Appointment</span>
                             </a>
 						</div>
 						<div class="header-right-bottom">
@@ -112,72 +113,24 @@
 	<!-- // Header -->
 	<!-- Slider -->
 	<div id="mainSliderWrapper">
-		<div id="mainSlider" class="slick-initialized slick-slider" style="height: 589px;">
-			<div aria-live="polite" class="slick-list draggable" tabindex="0">
-            	<div class="slick-track" style="opacity: 1; width: 4047px;">
-                	<div class="slide slick-slide" data-slick-index="0" aria-hidden="true" style="width: 1349px; position: relative; left: 0px; top: 0px; z-index: 800; opacity: 0;">
-						<div class="img--holder" style="background-image:url(images/how-works-img-1.jpg); height: 589px;"></div>
-						<div class="slide-content center">
-						<div class="vert-wrap container">
-						<div class="vert">
-							<div class="container">
-								<h4 data-animation="zoomIn" data-animation-delay="0.5s" class="">Looking for Right Vehicle</h4>
-								<h3 data-animation="scaleOut" data-animation-delay="0.2s" class="">Repair Service?</h3>
-								<p data-animation="fadeIn" data-animation-delay="0.9s" class="">Get your fair-price repair estimates</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-            <div class="slide slick-slide slick-active slidein" data-slick-index="1" aria-hidden="false" style="width: 1349px; position: relative; left: -1349px; top: 0px; z-index: 900; opacity: 1;">
-				<div class="img--holder" style="background-image:url(images/how-works-img-3.jpg); height: 589px;"></div>
-				<div class="slide-content container left">
-					<div class="vert-wrap">
-						<div class="vert">
-							<div class="container">
-								<h4 data-animation="fadeInLeft" data-animation-delay="0.2s" class="">Full Service of</h4>
-								<h3 data-animation="flipInX" data-animation-delay="0.8s" class="">Auto Repair</h3>
-								<h3 data-animation="flipInX" data-animation-delay="1.2s" class="">&amp; Maintenance</h3>
-								<p data-animation="fadeIn" data-animation-delay="1.5s" class="">Over 35 Years Of Quality Auto Service</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><div class="slide slick-slide" data-slick-index="2" aria-hidden="true" style="width: 1349px; position: relative; left: -2698px; top: 0px; z-index: 800; opacity: 0;">
-				<div class="img--holder" style="background-image:url(images/how-works-img-1.jpg); height: 589px;"></div>
-				<div class="slide-content container center">
-					<div class="vert-wrap">
-						<div class="vert">
-							<div class="container">
-								<h4 data-animation="zoomIn" data-animation-delay="0.8s">Trust Your Vehicle to</h4>
-								<h3 data-animation="fadeInUp" data-animation-delay="0.2s">Certified</h3>
-								<h3 data-animation="fadeInUp" data-animation-delay="0.5s">Technicians</h3>
-								<p data-animation="fadeIn" data-animation-delay="1.2s">SERVICE, MAINTENANCE &amp; REPAIR BY THE CERTIFIED SERVICE EXPERTS</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-            </div>
-            </div>
-		<button type="button" data-role="none" class="slick-prev" aria-label="previous" style="display: block;">Previous<span class="icon-wrap"></span></button>
-        <button type="button" data-role="none" class="slick-next" aria-label="next" style="display: block;">Next<span class="icon-wrap"></span></button></div>
-	</div>
+		<div id="mainSlider" class="slick-initialized slick-slider" style="height: 589px;background-image:url(images/1236463291d1c80afcc20a2bfb8894c8.jpg);background-repeat:no-repeat;background-size:cover;">
+        </div>
+    </div>
 	<!-- Slider -->
 	<!-- Content  -->
 	<div id="pageContent">
 		<!-- Under Slider Banner -->
-		<div class="block banner-under-slider">
+		<div class="block banner-under-slider" style="background-image:url(images/1.jpg);background-repeat:no-repeat;background-size:cover;">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-8 col-md-6">
 						<div class="row">
 							<div class="col-md-6">
-								<h2>After Hours</h2>
-								<h2 class="h-lg text-right"><span class="color">Drop-OFF</span></h2>
+								<h2>Schedule A Booking</h2>
+								<h2 class="h-lg text-right"><span class="color">For Your Vehicle Service</span></h2>
 							</div>
 							<div class="col-md-6">
-								<p>We realize that you lead a busy life, so we've made it easy for you to drop off your vehicle 24/7.</p>
+								<p>We realize that you lead a busy life, so we've made it easy for you to schedule your service.</p>
 							</div>
 						</div>
 					</div>
@@ -187,7 +140,7 @@
 								<div class="negative-margin"><img src="images/banner-key.png" class="img-responsive" alt=""></div>
 							</div>
 							<div class="col-md-6 col-lg-4 action hidden-xs">
-								<a href="#" class="btn btn-full btn-border"><span>Know more</span></a>
+								<a href="#" data-toggle="modal" data-target="#appointmentForm" class="btn btn-full btn-border appointment"><span>Schedule</span></a>
 							</div>
 						</div>
 					</div>
@@ -219,9 +172,7 @@
 						</div>
 					</div>
 					<div class="service">
-						<a href="#" class="image image-scale">
                         	<img src="images/service-2-bg.jpg" alt="#">
-                        </a>
 					</div>
 					<div class="service">
 						<div class="image">
@@ -239,9 +190,7 @@
 						</div>
 					</div>
 					<div class="service">
-						<a href="#" class="image image-scale">
                         	<img src="images/service-4-bg.jpg" alt="#">
-                        </a>
 					</div>
 					<div class="service dark">
 						<div class="image">
@@ -261,16 +210,14 @@
 						</div>
 					</div>
 					<div class="service">
-						<a href="#" class="image image-scale">
                         	<img src="images/service-6-bg.jpg" alt="#">
-                        </a>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- //Services Banner Block -->
 		<!-- Services List Block -->
-		<div class="block bg-1">
+		<div class="block bg-1" style="background-image:url(images/modern-4k-car-wallpaper-in-picture-t1xy-with-4k-car-wallpaper-new-on-wallpapers.jpg);background-repeat:no-repeat;background-size:cover;">
 			<div class="container">
 				<h2 class="h-lg text-center">Our <span class="color">Services</span></h2>
 				<p class="info text-center">Below are some of the many auto repair services we offer:</p>
@@ -313,518 +260,11 @@
 						</ul>
 					</div>
 				</div>
-				<div class="text-center"><a href="index.php#slideMobile" class="view-more-link color"><span class="more">All Services</span><span class="less">Hide All Services</span></a>
-				</div>
 			</div>
 		</div>
 		<!-- //Services List Block -->
-		<!-- Block -->
-		<div class="block">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-lg-5">
-						<div class="vertical-tab-container" id="tabForm">
-							<div class="vertical-tab-menu">
-								<div class="list-group">
-									<a href="#" class="list-group-item active text-center">
-										<span>Tires</span>
-										<i class="icon icon-car-wheel"></i>
-									</a>
-									<a href="#" class="list-group-item text-center">
-										<span>Oil change</span>
-										<i class="icon icon-oil"></i>
-									</a>
-									<a href="#" class="list-group-item text-center">
-										<span>Batteries</span>
-										<i class="icon icon-power"></i>
-									</a>
-									<a href="#" class="list-group-item text-center">
-										<span>Brakes</span>
-										<i class="icon icon-disc-brake"></i>
-									</a>
-									<a href="#" class="list-group-item text-center">
-										<span>Alignment</span>
-										<i class="icon icon-balance"></i>
-									</a>
-								</div>
-							</div>
-							<div class="vertical-tab">
-								<!-- Tires section -->
-								<div class="vertical-tab-content active">
-									<h3>Get the Right Tires</h3>
-									<div class="clearfix">
-										<a href="index.php#tabForm" class="toggle-btn active">By Vehicle</a>
-                                        <a href="index.php#tabForm" class="toggle-btn">By Tire</a>
-									</div>
-									<p class="comment">All fields are required</p>
-									<form id="tab1-form">
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select1" class="input-custom">
-													<option value="">Year</option>
-													<option value="">2010</option>
-													<option value="">2015</option>
-													<option value="">2016</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select2" class="input-custom">
-													<option value="">Make</option>
-													<option value="">Ford</option>
-													<option value="">Audi</option>
-													<option value="">Honda</option>
-													<option value="">Toyota</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select3" class="input-custom">
-													<option value="">Model</option>
-													<option value="">Escort</option>
-													<option value="">Prius</option>
-													<option value="">Camaro</option>
-													<option value="">Civic</option>
-													<option value="">240DL</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select4" class="input-custom">
-													<option value="">Submodel</option>
-													<option value="">Sedan</option>
-													<option value="">Hatchback</option>
-													<option value="">Regular Cab</option>
-													<option value="">Crew Cab</option>
-												</select>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-xs-7">
-												<div class="form-group">
-													<div class="select-wrapper">
-														<select name="select5" class="input-custom">
-															<option value="">TPMS</option>
-															<option value="">RDKS</option>
-														</select>
-													</div>
-												</div>
-											</div>
-											<div class="col-xs-5">
-                                            	<a href="#" class="comment">What’s this?</a>
-                                            </div>
-										</div>
-										<div class="form-group">
-											<div class="row">
-												<div class="col-xs-7">
-													<div class="form-group">
-														<div class="select-wrapper">
-															<select name="select6" class="input-custom">
-																<option value="">60605</option>
-																<option value="">20105</option>
-															</select>
-														</div>
-													</div>
-												</div>
-												<div class="col-xs-5">
-                                                	<a href="#" class="comment">Why?</a>
-                                                 </div>
-											</div>
-										</div>
-										<a class="btn btn-lg btn-full" data-toggle="modal" data-target="#tab1Modal"><span>Get Tire Pricing</span></a>
-									</form>
-								</div>
-								<!-- Oil section -->
-								<div class="vertical-tab-content">
-									<h3>Get the Right Oil</h3>
-									<div class="clearfix">
-										<a href="index.php#tabForm" class="toggle-btn active">By Vehicle</a>
-                                        <a href="index.php#tabForm" class="toggle-btn">By Tire</a>
-									</div>
-									<p class="comment">All fields are required</p>
-									<form id="tab2-form">
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select1" class="input-custom">
-													<option value="">Year</option>
-													<option value="">2010</option>
-													<option value="">2015</option>
-													<option value="">2016</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select2" class="input-custom">
-													<option value="">Make</option>
-													<option value="">Ford</option>
-													<option value="">Audi</option>
-													<option value="">Honda</option>
-													<option value="">Toyota</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select3" class="input-custom">
-													<option value="">Model</option>
-													<option value="">Escort</option>
-													<option value="">Prius</option>
-													<option value="">Camaro</option>
-													<option value="">Civic</option>
-													<option value="">240DL</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select4" class="input-custom">
-													<option value="">Submodel</option>
-													<option value="">Sedan</option>
-													<option value="">Hatchback</option>
-													<option value="">Regular Cab</option>
-													<option value="">Crew Cab</option>
-												</select>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-xs-7">
-												<div class="form-group">
-													<div class="select-wrapper">
-														<select name="select5" class="input-custom">
-															<option value="">TPMS</option>
-															<option value="">RDKS</option>
-														</select>
-													</div>
-												</div>
-											</div>
-											<div class="col-xs-5">
-                                           		<a href="#" class="comment">What’s this?</a>
-                                            </div>
-										</div>
-										<div class="form-group">
-											<div class="row">
-												<div class="col-xs-7">
-													<div class="form-group">
-														<div class="select-wrapper">
-															<select name="select6" class="input-custom">
-																<option value="">60605</option>
-																<option value="">20105</option>
-															</select>
-														</div>
-													</div>
-												</div>
-												<div class="col-xs-5">
-                                                	<a href="#" class="comment">Why?</a>
-                                                </div>
-											</div>
-										</div>
-										<a class="btn btn-lg btn-full" data-toggle="modal" data-target="#tab2Modal"><span>Get Oil Pricing</span></a>
-									</form>
-								</div>
-								<!-- Batteries section -->
-								<div class="vertical-tab-content">
-									<h3>Select the Model</h3>
-									<div class="clearfix">
-										<a href="index.php#tabForm" class="toggle-btn active">By Vehicle</a>
-                                        <a href="index.php#tabForm" class="toggle-btn">By Tire</a>
-									</div>
-									<p class="comment">All fields are required</p>
-									<form id="tab3-form">
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select1" class="input-custom">
-													<option value="">Year</option>
-													<option value="">2010</option>
-													<option value="">2015</option>
-													<option value="">2016</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select2" class="input-custom">
-													<option value="">Make</option>
-													<option value="">Ford</option>
-													<option value="">Audi</option>
-													<option value="">Honda</option>
-													<option value="">Toyota</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select3" class="input-custom">
-													<option value="">Model</option>
-													<option value="">Escort</option>
-													<option value="">Prius</option>
-													<option value="">Camaro</option>
-													<option value="">Civic</option>
-													<option value="">240DL</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select4" class="input-custom">
-													<option value="">Submodel</option>
-													<option value="">Sedan</option>
-													<option value="">Hatchback</option>
-													<option value="">Regular Cab</option>
-													<option value="">Crew Cab</option>
-												</select>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-xs-7">
-												<div class="form-group">
-													<div class="select-wrapper">
-														<select name="select5" class="input-custom">
-															<option value="">TPMS</option>
-															<option value="">RDKS</option>
-														</select>
-													</div>
-												</div>
-											</div>
-											<div class="col-xs-5">
-                                            	<a href="#" class="comment">What’s this?</a>
-                                            </div>
-										</div>
-										<div class="form-group">
-											<div class="row">
-												<div class="col-xs-7">
-													<div class="form-group">
-														<div class="select-wrapper">
-															<select name="select6" class="input-custom">
-																<option value="">60605</option>
-																<option value="">20105</option>
-															</select>
-														</div>
-													</div>
-												</div>
-												<div class="col-xs-5">
-                                                	<a href="#" class="comment">Why?</a>
-                                                </div>
-											</div>
-										</div>
-										<a class="btn btn-lg btn-full" data-toggle="modal" data-target="#tab3Modal"><span>Get Batteries Pricing</span></a>
-									</form>
-								</div>
-								<!-- Brakes section -->
-								<div class="vertical-tab-content">
-									<h3>Select the Model</h3>
-									<div class="clearfix">
-										<a href="index.php#tabForm" class="toggle-btn active">By Vehicle</a>
-                                        <a href="index.php#tabForm" class="toggle-btn">By Tire</a>
-									</div>
-									<p class="comment">All fields are required</p>
-									<form id="tab4-form">
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select1" class="input-custom">
-													<option value="">Year</option>
-													<option value="">2010</option>
-													<option value="">2015</option>
-													<option value="">2016</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select2" class="input-custom">
-													<option value="">Make</option>
-													<option value="">Ford</option>
-													<option value="">Audi</option>
-													<option value="">Honda</option>
-													<option value="">Toyota</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select3" class="input-custom">
-													<option value="">Model</option>
-													<option value="">Escort</option>
-													<option value="">Prius</option>
-													<option value="">Camaro</option>
-													<option value="">Civic</option>
-													<option value="">240DL</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select4" class="input-custom">
-													<option value="">Submodel</option>
-													<option value="">Sedan</option>
-													<option value="">Hatchback</option>
-													<option value="">Regular Cab</option>
-													<option value="">Crew Cab</option>
-												</select>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-xs-7">
-												<div class="form-group">
-													<div class="select-wrapper">
-														<select name="select5" class="input-custom">
-															<option value="">TPMS</option>
-															<option value="">RDKS</option>
-														</select>
-													</div>
-												</div>
-											</div>
-											<div class="col-xs-5">
-                                            	<a href="#" class="comment">What’s this?</a>
-                                            </div>
-										</div>
-										<div class="form-group">
-											<div class="row">
-												<div class="col-xs-7">
-													<div class="form-group">
-														<div class="select-wrapper">
-															<select name="select6" class="input-custom">
-																<option value="">60605</option>
-																<option value="">20105</option>
-															</select>
-														</div>
-													</div>
-												</div>
-												<div class="col-xs-5">
-                                                	<a href="#" class="comment">Why?</a>
-                                                </div>
-											</div>
-										</div>
-										<a class="btn btn-lg btn-full" data-toggle="modal" data-target="#tab4Modal"><span>Get Brakes Pricing</span></a>
-									</form>
-								</div>
-								<!-- Alignment section -->
-								<div class="vertical-tab-content">
-									<h3>Select the Model</h3>
-									<div class="clearfix">
-										<a href="index.php#tabForm" class="toggle-btn active">By Vehicle</a>
-                                        <a href="index.php#tabForm" class="toggle-btn">By Tire</a>
-									</div>
-									<p class="comment">All fields are required</p>
-									<form id="tab5-form">
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select1" class="input-custom">
-													<option value="">Year</option>
-													<option value="">2010</option>
-													<option value="">2015</option>
-													<option value="">2016</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select2" class="input-custom">
-													<option value="">Make</option>
-													<option value="">Ford</option>
-													<option value="">Audi</option>
-													<option value="">Honda</option>
-													<option value="">Toyota</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select3" class="input-custom">
-													<option value="">Model</option>
-													<option value="">Escort</option>
-													<option value="">Prius</option>
-													<option value="">Camaro</option>
-													<option value="">Civic</option>
-													<option value="">240DL</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="select-wrapper">
-												<select name="select4" class="input-custom">
-													<option value="">Submodel</option>
-													<option value="">Sedan</option>
-													<option value="">Hatchback</option>
-													<option value="">Regular Cab</option>
-													<option value="">Crew Cab</option>
-												</select>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-xs-7">
-												<div class="form-group">
-													<div class="select-wrapper">
-														<select name="select5" class="input-custom">
-															<option value="">TPMS</option>
-															<option value="">RDKS</option>
-														</select>
-													</div>
-												</div>
-											</div>
-											<div class="col-xs-5">
-                                            	<a href="#" class="comment">What’s this?</a>
-                                            </div>
-										</div>
-										<div class="form-group">
-											<div class="row">
-												<div class="col-xs-7">
-													<div class="form-group">
-														<div class="select-wrapper">
-															<select name="select6" class="input-custom">
-																<option value="">60605</option>
-																<option value="">20105</option>
-															</select>
-														</div>
-													</div>
-												</div>
-												<div class="col-xs-5">
-                                                	<a href="#" class="comment">Why?</a>
-                                                </div>
-											</div>
-										</div>
-										<a class="btn btn-lg btn-full" data-toggle="modal" data-target="#tab5Modal"><span>Get Pricing</span></a>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="divider-lg visible-sm visible-xs"></div>
-					<div class="col-md-6 col-lg-7">
-						<h2>About Car Repair Services</h2>
-						<p>Our service facility is independently owned and operated providing full-service repair and maintenance services. We use the latest diagnostic equipment to guarantee your vehicle is repaired or serviced properly and in a timely fashion. We are a member of Professional Auto Service, an elite performance network, where independent service facilities share common goals of being world-class automotive service centers.</p>
-						<ul class="marker-list-sm marker-list-italic">
-							<li>24 Month / 24,000km Nationwide Warranty</li>
-							<li>ASE Certified Technicians</li>
-							<li>Customer Rewards Program</li>
-							<li>24-Hour Roadside Assistance</li>
-							<li>Courtesy Local Shuttle Service</li>
-							<li>Courtesy Loaner Vehicle</li>
-						</ul>
-						<div class="coupon">
-							<div class="coupon-row">
-								<div class="coupon-col-left text-center">
-									<div class="coupon-text1">Coupons from</div>
-									<div class="coupon-text2"><span>$</span>25<span>off</span></div>
-									<div class="coupon-text3">Repairs!</div>
-								</div>
-								<div class="coupon-col-right text-center">
-									<div class="coupon-text4">Our Latest Specials</div>
-									<div class="coupon-text5">Any Servcie of $250 or More</div>
-									<a href="#" class="coupon-all">SEE ALL COUPONS<span></span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- //Block -->
 		<!-- How It Works -->
-		<div class="block bg-2">
+		<div class="block bg-2" style="background-image:url(images/2.jpg);background-repeat:no-repeat;background-size:cover;">
 			<div class="container">
 				<h2 class="h-lg text-center">How It <span class="color">Works</span></h2>
 				<div class="row how-works-row shifted">
@@ -837,7 +277,7 @@
 								<div class="inside">
 									<div class="number"><span>1</span></div>
 									<div class="text">
-										<h5>Make an Appointment</h5>
+										<h5>Visit The Web Site</h5>
 									</div>
 								</div>
 							</div>
@@ -852,7 +292,7 @@
 								<div class="inside">
 									<div class="number"><span>2</span></div>
 									<div class="text">
-										<h5>Select Services</h5>
+										<h5>Make A Booking</h5>
 									</div>
 								</div>
 							</div>
@@ -867,7 +307,7 @@
 								<div class="inside">
 									<div class="number"><span>3</span></div>
 									<div class="text">
-										<h5>Select Quote, Confirm Request</h5>
+										<h5>Come On Time</h5>
 									</div>
 								</div>
 							</div>
@@ -882,7 +322,7 @@
 								<div class="inside">
 									<div class="number"><span>4</span></div>
 									<div class="text">
-										<h5>GET YOUR CAR</h5>
+										<h5>Get Your Vehicle Serviced</h5>
 									</div>
 								</div>
 							</div>
@@ -896,36 +336,32 @@
 		<div class="block">
 			<div class="container">
 				<h2 class="h-lg text-center">Why Choose Certified Service?</h2>
-				<p class="info text-center">We partnered with RepairPal to bring you the most sophisticated fair-price estimates </p>
+				<p class="info text-center">Years of experience and customer oriented pleasant staff to serve you...</p>
 				<div class="row text-icon-carousel slick-initialized slick-slider">
 					<div aria-live="polite" class="slick-list draggable" tabindex="0">
                     	<div class="slick-track" style="opacity: 1; width: 1200px; transform: translate3d(0px, 0px, 0px);">
                         	<div class="col-sm-4 col-md-4 slick-slide slick-active" data-slick-index="0" aria-hidden="false" style="width: 400px;">
 								<div class="text-icon">
-									<div class="icon-wrapper"><span><i class="icon icon-technology"></i><span class="icon-hover"></span></span>
+									<div class="icon-wrapper"><span><i class="fa fa-mobile"></i><span class="icon-hover"></span></span>
 									</div>
-                                        <h3 class="title" style="height: 36px;">Estimates</h3>
-                                        <p class="text" style="height: 48px;">We bring you the most accurate and fair-price service estimates</p>
+                                        <h3 class="title" style="height: 36px;">Easy</h3>
+                                        <p class="text" style="height: 48px;">Just a click away from scheduling a booking for your vehicle service</p>
 								</div>
 							</div>
                             <div class="col-sm-4 col-md-4 slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 400px;">
 							<div class="text-icon">
-								<div class="icon-wrapper"><span><i class="icon icon-tool"></i><span class="icon-hover"></span></span>
+								<div class="icon-wrapper"><span><i class="fa fa-users"></i><span class="icon-hover"></span></span>
 								</div>
-                                <h3 class="title" style="height: 36px;">Trusted</h3>
-                                <p class="text" style="height: 48px;">Trusted Service Centers
-								<br> are certified for high quality
-								</p>
+                                <h3 class="title" style="height: 36px;">Friendly</h3>
+                                <p class="text" style="height: 48px;">Friendly staff waiting to serve you</p>
 							</div>
 						</div>
                         <div class="col-sm-4 col-md-4 slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 400px;">
 							<div class="text-icon">
-								<div class="icon-wrapper"><span><i class="icon icon-diploma"></i><span class="icon-hover"></span></span>
+								<div class="icon-wrapper"><span><i class="fa fa-car"></i><span class="icon-hover"></span></span>
 								</div>
-                                <h3 class="title" style="height: 36px;">Guarantees</h3>
-                                <p class="text" style="height: 48px;">Covers parts and labor on qualifying repairs and services for
-								<br>24 months/24,000 miles
-								</p>
+                                <h3 class="title" style="height: 36px;">Quality</h3>
+                                <p class="text" style="height: 48px;">We are devoted to give the best service to our customers</p>
 							</div>
 						</div>
                     	</div>
@@ -934,7 +370,7 @@
 			</div>
 		</div>
 		<!-- //Services Block -->
-		<!-- Testimonials Block -->
+		<!-- Testimonials Block
 		<div class="block bg-3">
 			<div class="container-fluid">
 				<h2 class="h-lg text-center">What <span class="color">Our Clients</span> Say</h2>
@@ -1004,7 +440,7 @@
               </div>
 			</div>
 		</div>
-		<!-- //Testimonials Block -->
+        Testimonials Block -->
 		<!-- Statistics Block -->
 		<div class="block">
 			<div class="container">
@@ -1013,7 +449,7 @@
 				<div class="row" id="counterBlock">
 					<div class="col-sm-6 col-md-3">
 						<div class="stat-box">
-							<div><span class="number"><span class="count" data-to="10" data-speed="1000">10</span></span><span class="icon"><i class="icon-rocket"></i></span></div>
+							<div><span class="number"><span class="count" data-to="5" data-speed="1000">5</span></span><span class="icon"><i class="fa fa-rocket"></i></span></div>
 							<div class="text">
 								<h5>Years of experience</h5>
 							</div>
@@ -1021,15 +457,15 @@
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<div class="stat-box">
-							<div><span class="number"><span class="count" data-to="32" data-speed="1000">32</span></span><span class="icon"><i class="icon-people-1"></i></span></div>
+							<div><span class="number"><span class="count" data-to="32" data-speed="1000">10</span></span><span class="icon"><i class="fa fa-users"></i></span></div>
 							<div class="text">
-								<h5>Technicians &amp; workers</h5>
+								<h5>Staff &amp; workers</h5>
 							</div>
 						</div>
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<div class="stat-box">
-							<div><span class="number"><span class="count" data-to="2500" data-speed="1000">2500</span></span><span class="icon"><i class="icon-people"></i></span></div>
+							<div><span class="number"><span class="count" data-to="100" data-speed="1000">100</span></span><span class="icon"><i class="fa fa-child"></i></span></div>
 							<div class="text">
 								<h5>Satisfied customers</h5>
 							</div>
@@ -1037,9 +473,9 @@
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<div class="stat-box">
-							<div><span class="number"><span class="count" data-to="1900" data-speed="1000">1900</span></span><span class="icon"><i class="icon-transport"></i></span></div>
+							<div><span class="number"><span class="count" data-to="150" data-speed="1000">150</span></span><span class="icon"><i class="fa fa-bus"></i></span></div>
 							<div class="text">
-								<h5>Vehicle Repaired</h5>
+								<h5>Vehicles Serviced</h5>
 							</div>
 						</div>
 					</div>
@@ -1047,49 +483,6 @@
 			</div>
 		</div>
 		<!-- //Statistics Block -->
-		<!-- Recalls Block -->
-		<div class="block bg-dark full-block pad-sm">
-			<div class="container">
-				<div class="text-center">
-					<h2 class="h-lg">Safety <span class="color">&amp;</span> Recalls</h2>
-					<p class="info">Are there any recalls on your car? Find out!
-					</p>
-				</div>
-				<form action="#" class="form-table">
-					<div class="form-group form-group-cell">
-						<div class="select-wrapper">
-							<select class="input-custom">
-								<option value="">Enter make</option>
-								<option value="">Enter make</option>
-							</select>
-						</div>
-					</div>
-					<div class="form-group form-group-cell">
-						<div class="select-wrapper">
-							<select class="input-custom">
-								<option value="">Enter model</option>
-								<option value="">Enter model</option>
-							</select>
-						</div>
-					</div>
-					<div class="form-group form-group-cell sm">
-						<div class="select-wrapper">
-							<select class="input-custom">
-								<option value="">Year</option>
-								<option value="">2015</option>
-							</select>
-						</div>
-					</div>
-					<div class="form-group form-group-cell sm">
-						<input type="text" class="form-control input-custom" placeholder="ZIP">
-					</div>
-					<div class="form-group form-group-cell action">
-						<a class="btn btn-full btn-invert" data-toggle="modal" data-target="#getRecallsModal"><span>Get Recalls</span></a>
-					</div>
-				</form>
-			</div>
-		</div>
-		<!-- //Recalls Block -->
 		<!-- Appointment Block -->
 		<div class="block">
 			<div class="container">
@@ -1097,72 +490,10 @@
 					<div class="col-md-6">
 						<div class="text-appointment">
 							<h2 class="h-lg">Schedule <span class="color">Your Appointment</span> Today</h2>
-							<p class="info">Your Automotive Repair &amp; Maintenance Service Specialist</p>
-							<h2 class="h-phone">Call: 1-800-123-4567</h2>
+							<p class="info">Your Automotive Service Specialist</p>
+							<h2 class="h-phone">Call: +94-711790370</h2>
 							<div class="btn-inline">
 								<a class="btn btn-invert" href="#" data-toggle="modal" data-target="#appointmentForm"><span>Appointment</span></a>
-								<div class="form-popup-wrap">
-									<a class="btn form-popup-link" href="#"><span>Get Quote</span></a>
-									<div class="form-popup">
-										<form id="quote-form" method="post" novalidate>
-											<div id="successQuote" class="successform">
-												<p>Your message was sent successfully!</p>
-											</div>
-											<div id="errorQuote" class="errorform">
-												<p>Something went wrong, try refreshing and submitting the form again.</p>
-											</div>
-											<div class="form-inline">
-												<input type="text" name="name" class="form-control input-custom" value="" placeholder="Your Name">
-											</div>
-											<div class="form-inline">
-												<div>
-													<input type="text" name="email" class="form-control input-custom" value="" placeholder="Your E-mail">
-												</div>
-												<div>
-													<input type="text" name="phone" class="form-control input-custom" value="" placeholder="Phone number">
-												</div>
-											</div>
-											<div class="form-inline">
-												<div class="select-wrapper">
-													<select name="select1" class="input-custom">
-														<option value="Vehicle">Vehicle</option>
-														<option value="Car">Car</option>
-														<option value="Bike">Bike</option>
-													</select>
-												</div>
-												<div class="select-wrapper">
-													<select name="select2" class="input-custom">
-														<option value="2000">2000</option>
-														<option value="2001">2001</option>
-														<option value="2002">2002</option>
-														<option value="2003">2003</option>
-														<option value="2004">2004</option>
-														<option value="2005">2005</option>
-														<option value="2006">2006</option>
-														<option value="2007">2007</option>
-														<option value="2008">2008</option>
-														<option value="2009">2009</option>
-														<option value="2010">2010</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-inline">
-												<div class="select-wrapper">
-													<select name="select3" class="input-custom">
-														<option value="">Choose service</option>
-														<option value="Preventative Maintenance">Preventative Maintenance</option>
-														<option value="Brake Repair">Brake Repair &amp; Service</option>
-														<option value="Transmission Service">Transmission Service &amp; Repair</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-inline">
-												<textarea name="message" class="form-control textarea-custom" placeholder="Your comment"></textarea>
-											</div>
-											<button type="submit" id="submit" class="btn btn-lg btn-full"><span>get a quote</span></button>
-										</form>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -1179,42 +510,25 @@
 	<!-- // Content  -->
 	<!-- Footer -->
 	<div class="page-footer">
-		<div class="footer-content">
-			<div class="footer-col-left">
-				<div class="inside">
-					<div class="footer-phone">
-						<h2 class="h-phone">Call: <span class="number">+94-711790370</span></h2>
-					</div>
-					<div class="contact-info"><i class="icon icon-locate"></i>2605 Piliyanda, Colombo.
-					</div>
-					<div class="contact-info"><i class="icon icon-clock"></i>Monday-Saturday <span class="color">8:30AM - 5:30PM</span>
-						<br> Sunday Closed
-					</div>
-					<div class="social-links">
-						<ul>
-							<li>
-								<a class="icon icon-facebook-logo" href="#"></a>
-							</li>
-							<li>
-								<a class="icon icon-twitter-logo" href="#"></a>
-							</li>
-							<li>
-								<a class="icon icon-instagram-logo" href="#"></a>
-							</li>
-							<li>
-								<a class="icon icon-google-plus-logo" href="#"></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="footer-bottom">
 		  <div class="container">
 		    <div class="copyright">
 		      <div class="container">
-		        <div class="copyright">© 2017 <a href="www.striking.lk">Striking Solutions</a>, All Rights Reserved</div>
+		        <div class="copyright">All Rights Reserved © 2017 <a href="www.striking.lk" class="btn">Striking Solutions</a></div>
 	          </div>
+              <div class="social-links">
+                    <ul>
+                        <li>
+                            <a class="fa fa-twitter" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-facebook" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-instagram" href="#"></a>
+                        </li>
+                    </ul>
+                </div>
 		    </div>
 		  </div>
 		</div>
