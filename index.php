@@ -22,7 +22,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
-<body class="home color-green">	<div class="tools">
+<body class="home color-blue">	<div class="tools">
 		<span class="toggle">
         <img src="images/color-icon.png" class="img-responsive" alt=""></span>
 		<a href="index.php#" class="color-yellow">Yellow</a>
@@ -89,19 +89,19 @@
                                 	<a href="#"><span>Home</span></a>
                                 </li>
 								<li>
-                                	<a href="#"><span>About Us</span></a>
+                                	<a href="#what-we-do"><span>What We Do</span></a>
                                 </li>
 								<li>
-                                	<a href="#"><span>Pricing</span></a>
+                                	<a href="#our-services"><span>Our Services</span></a>
                                 </li>
 								<li>
-                                	<a href="#"><span>FAQ</span></a>
+                                	<a href="#how-it-works"><span>How It Works</span></a>
                                 </li>
 								<li>
-                                	<a href="#"><span>Shop</span></a>
+                                	<a href="#why-choose-us"><span>Why Choose Us</span></a>
                                 </li>
 								<li>
-                                	<a href="#"><span>Contacts</span></a>
+                                	<a href="#schedule-appointment"><span>Schedule</span></a>
                                 </li>
 							</ul>
 						</div>
@@ -149,7 +149,7 @@
 		</div>
 		<!-- // Under Slider Banner -->
 		<!-- Services Banner Block -->
-		<div class="block">
+		<div class="block" id="what-we-do" style="padding-top:70px;padding-bottom:30px;">
 			<div class="container">
 				<div class="text-center">
 					<h2 class="h-lg">What We Do</h2>
@@ -217,7 +217,7 @@
 		</div>
 		<!-- //Services Banner Block -->
 		<!-- Services List Block -->
-		<div class="block bg-1" style="background-image:url(images/modern-4k-car-wallpaper-in-picture-t1xy-with-4k-car-wallpaper-new-on-wallpapers.jpg);background-repeat:no-repeat;background-size:cover;">
+		<div class="block bg-1" style="background-image:url(images/modern-4k-car-wallpaper-in-picture-t1xy-with-4k-car-wallpaper-new-on-wallpapers.jpg);background-repeat:no-repeat;background-size:cover;padding-top:80px;margin-top:30px;" id="our-services">
 			<div class="container">
 				<h2 class="h-lg text-center">Our <span class="color">Services</span></h2>
 				<p class="info text-center">Below are some of the many auto repair services we offer:</p>
@@ -264,7 +264,7 @@
 		</div>
 		<!-- //Services List Block -->
 		<!-- How It Works -->
-		<div class="block bg-2" style="background-image:url(images/2.jpg);background-repeat:no-repeat;background-size:cover;">
+		<div class="block bg-2" style="background-image:url(images/2.jpg);background-repeat:no-repeat;background-size:cover;" id="how-it-works">
 			<div class="container">
 				<h2 class="h-lg text-center">How It <span class="color">Works</span></h2>
 				<div class="row how-works-row shifted">
@@ -333,7 +333,7 @@
 		</div>
 		<!-- //How It Works -->
 		<!-- Services Block -->
-		<div class="block">
+		<div class="block" id="why-choose-us" style="padding-top:80px;">
 			<div class="container">
 				<h2 class="h-lg text-center">Why Choose Certified Service?</h2>
 				<p class="info text-center">Years of experience and customer oriented pleasant staff to serve you...</p>
@@ -361,7 +361,7 @@
 								<div class="icon-wrapper"><span><i class="fa fa-car"></i><span class="icon-hover"></span></span>
 								</div>
                                 <h3 class="title" style="height: 36px;">Quality</h3>
-                                <p class="text" style="height: 48px;">We are devoted to give the best service to our customers</p>
+                                <p class="text" style="height: 48px;">We are dedicated to give the best service to our customers</p>
 							</div>
 						</div>
                     	</div>
@@ -370,77 +370,6 @@
 			</div>
 		</div>
 		<!-- //Services Block -->
-		<!-- Testimonials Block
-		<div class="block bg-3">
-			<div class="container-fluid">
-				<h2 class="h-lg text-center">What <span class="color">Our Clients</span> Say</h2>
-				<div class="testimonials-carousel slick-initialized slick-slider">
-					<div aria-live="polite" class="slick-list draggable" tabindex="0">
-                    	<div class="slick-track" style="opacity: 1; width: 5396px;">
-                        	<div class="testimonials slick-slide" data-slick-index="0" aria-hidden="true" style="width: 1349px; position: relative; left: 0px; top: 0px; z-index: 800; opacity: 0;">
-								<div class="testimonials-item">
-									<div class="inside">
-										<div class="meta">
-                                        	<span class="rating"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>
-                                            <span class="username">Joseph C. Lane</span>
-                                     	</div>
-										<div class="text">Yesterday's crown preparation went great. I expected the same level of discomfort that I had experienced with another crown done by different dentist. Technique caused so much less difficulty that I went away with a smile on my face.</div>
-									</div>
-									<div class="bg-image" style="background-image: url(images/testimonial-bg-1.jpg);"></div>
-									</div>
-									<div class="testimonials-item testimonials-item--dark">
-										<div class="inside">
-											<div class="meta">
-                                            	<span class="rating"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span><span class="username">Joseph M. Fischer</span>
-                                            </div>
-											<div class="text">Fast and painless service, very happy with this establishment. I Highly Recommend them. I had my semiannual cleaning and checkup. And as always, it was an excellent experience.</div>
-											</div>
-											<div class="bg-image" style="background-image: url(images/testimonial-bg-2.jpg);"></div>
-										</div>
-									</div>
-                                    <div class="testimonials slick-slide" data-slick-index="1" aria-hidden="true" style="width: 1349px; position: relative; left: -1349px; top: 0px; z-index: 800; opacity: 0;">
-										<div class="testimonials-item testimonials-item--dark">
-											<div class="inside">
-												<div class="meta">
-                                                	<span class="rating"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span><span class="username">Joseph C. Lane</span>
-                                                </div>
-												<div class="text">Yesterday's crown preparation went great. I expected the same level of discomfort that I had experienced with another crown done by different dentist. Technique caused so much less difficulty that I went away with a smile on my face.</div>
-											</div>
-											<div class="bg-image" style="background-image: url(images/testimonial-bg-2.jpg);"></div>
-										</div>
-										<div class="testimonials-item">
-											<div class="inside">
-												<div class="meta">
-                                                	<span class="rating"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span><span class="username">Joseph M. Fischer</span>
-                                                </div>
-												<div class="text">Fast and painless service, very happy with this establishment. I Highly Recommend them. I had my semiannual cleaning and checkup. And as always, it was an excellent experience.</div>
-											</div>
-											<div class="bg-image" style="background-image: url(images/testimonial-bg-1.jpg);"></div>
-										</div>
-									</div>
-                                    <div class="testimonials slick-slide" data-slick-index="2" aria-hidden="true" style="width: 1349px; position: relative; left: -2698px; top: 0px; z-index: 800; opacity: 0;">
-										<div class="testimonials-item">
-											<div class="inside">
-												<div class="meta">
-                                                	<span class="rating"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span><span class="username">Joseph C. Lane</span>
-                                                </div>
-												<div class="text">Yesterday's crown preparation went great. I expected the same level of discomfort that I had experienced with another crown done by different dentist. Technique caused so much less difficulty that I went away with a smile on my face.</div>
-										</div>
-										<div class="bg-image" style="background-image: url(images/testimonial-bg-1.jpg);"></div>
-										</div>
-									</div>
-                                </div>
-                            </div>
-				<ul class="slick-dots" style="display: block;">
-                	<li class="" aria-hidden="true"><button type="button" data-role="none">1</button></li>
-                    <li aria-hidden="true" class=""><button type="button" data-role="none">2</button></li>
-                    <li aria-hidden="true" class=""><button type="button" data-role="none">3</button></li>
-                    <li aria-hidden="false" class="slick-active"><button type="button" data-role="none">4</button></li>
-                </ul>
-              </div>
-			</div>
-		</div>
-        Testimonials Block -->
 		<!-- Statistics Block -->
 		<div class="block">
 			<div class="container">
@@ -484,7 +413,7 @@
 		</div>
 		<!-- //Statistics Block -->
 		<!-- Appointment Block -->
-		<div class="block">
+		<div class="block" id="schedule-appointment">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
@@ -509,202 +438,24 @@
 	</div>
 	<!-- // Content  -->
 	<!-- Footer -->
-	<div class="page-footer">
-		<div class="footer-bottom">
-		  <div class="container">
-		    <div class="copyright">
-		      <div class="container">
-		        <div class="copyright">All Rights Reserved © 2017 <a href="www.striking.lk" class="btn">Striking Solutions</a></div>
-	          </div>
-              <div class="social-links">
-                    <ul>
-                        <li>
-                            <a class="fa fa-twitter" href="#"></a>
-                        </li>
-                        <li>
-                            <a class="fa fa-facebook" href="#"></a>
-                        </li>
-                        <li>
-                            <a class="fa fa-instagram" href="#"></a>
-                        </li>
-                    </ul>
-                </div>
-		    </div>
-		  </div>
-		</div>
-	</div>
+    <div class="col-md-12 text-center" style="background-color:rgb(0,0,0);padding:15px;height:8vh;">
+        <font class="color" face="Verdana, Geneva, sans-serif">All Rights Reserved <a href="www.striking.lk" class="color">Striking Solutions</a> &copy; <?php $year = getdate(); echo $year['year']; ?></font>
+    </div>
 	<!-- //Footer -->
-	<div class="darkout-menu"></div>
-	<!--Get Form Info-->
-	<div class="modal modal-info fade" id="tab1Modal">
-		<div class="modal-dialog container">
-			<div class="modal-content">
-				<div class="modal-header">
-					<div class="row">
-						<div class="col-xs-9">
-							<h3>The Tires Price</h3>
-						</div>
-						<div class="col-xs-3">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-close-cross"></i></button>
-						</div>
-					</div>
-				</div>
-				<div class="modal-body">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae in, perspiciatis iusto rerum non temporibus tenetur.
-					<ul class="marker-list-sm marker-list-italic">
-						<li><b>Price:</b> $49.95</li>
-						<li><b>Your discount:</b> -20%</li>
-						<li><b>Total Price:</b> $39.95</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //Get Form Info -->
-	<!--Get Form Info-->
-	<div class="modal modal-info fade" id="tab2Modal">
-		<div class="modal-dialog container">
-			<div class="modal-content">
-				<div class="modal-header">
-					<div class="row">
-						<div class="col-xs-9">
-							<h3>Oil Change Price</h3>
-						</div>
-						<div class="col-xs-3">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-close-cross"></i></button>
-						</div>
-					</div>
-				</div>
-				<div class="modal-body">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae in, perspiciatis iusto rerum non temporibus tenetur.
-					<ul class="marker-list-sm marker-list-italic">
-						<li><b>Price:</b> $49.95</li>
-						<li><b>Your discount:</b> -20%</li>
-						<li><b>Total Price:</b> $39.95</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //Get Form Info -->
-	<!--Get Form Info-->
-	<div class="modal modal-info fade" id="tab3Modal">
-		<div class="modal-dialog container">
-			<div class="modal-content">
-				<div class="modal-header">
-					<div class="row">
-						<div class="col-xs-9">
-							<h3>Batteries Price</h3>
-						</div>
-						<div class="col-xs-3">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-close-cross"></i></button>
-						</div>
-					</div>
-				</div>
-				<div class="modal-body">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae in, perspiciatis iusto rerum non temporibus tenetur.
-					<ul class="marker-list-sm marker-list-italic">
-						<li><b>Price:</b> $49.95</li>
-						<li><b>Your discount:</b> -20%</li>
-						<li><b>Total Price:</b> $39.95</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //Get Form Info -->
-	<!--Get Form Info-->
-	<div class="modal modal-info fade" id="tab4Modal">
-		<div class="modal-dialog container">
-			<div class="modal-content">
-				<div class="modal-header">
-					<div class="row">
-						<div class="col-xs-9">
-							<h3>Brakes Price</h3>
-						</div>
-						<div class="col-xs-3">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-close-cross"></i></button>
-						</div>
-					</div>
-				</div>
-				<div class="modal-body">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae in, perspiciatis iusto rerum non temporibus tenetur.
-					<ul class="marker-list-sm marker-list-italic">
-						<li><b>Price:</b> $49.95</li>
-						<li><b>Your discount:</b> -20%</li>
-						<li><b>Total Price:</b> $39.95</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //Get Form Info -->
-	<!--Get Form Info-->
-	<div class="modal modal-info fade" id="tab5Modal">
-		<div class="modal-dialog container">
-			<div class="modal-content">
-				<div class="modal-header">
-					<div class="row">
-						<div class="col-xs-9">
-							<h3>Aligment Price</h3>
-						</div>
-						<div class="col-xs-3">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-close-cross"></i></button>
-						</div>
-					</div>
-				</div>
-				<div class="modal-body">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae in, perspiciatis iusto rerum non temporibus tenetur.
-					<ul class="marker-list-sm marker-list-italic">
-						<li><b>Price:</b> $49.95</li>
-						<li><b>Your discount:</b> -20%</li>
-						<li><b>Total Price:</b> $39.95</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //Get Form Info -->
-	<!--Get Recalls-->
-	<div class="modal modal-info fade" id="getRecallsModal">
-		<div class="modal-dialog container">
-			<div class="modal-content">
-				<div class="modal-header">
-					<div class="row">
-						<div class="col-xs-9">
-							<h3>Recalls, Investigations &amp; Complaints</h3>
-						</div>
-						<div class="col-xs-3">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-close-cross"></i></button>
-						</div>
-					</div>
-				</div>
-				<div class="modal-body">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae in, perspiciatis iusto rerum non temporibus tenetur.
-					<ul class="marker-list-sm marker-list-italic">
-						<li>Lorem ipsum dolor sit amet, consectetur</li>
-						<li>Repellendus alias unde tempore assumenda fugiat</li>
-						<li>Blanditiis impedit repellat, quos minus dolorem autem</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //Get Recalls -->
 	<!-- Appointment Form -->
 	<div class="modal fade" id="appointmentForm">
 		<div class="modal-dialog container">
 			<div class="modal-content">
 				<div class="modal-header">
-                <a href="#" class="appointment" data-toggle="modal" data-target="#appointmentForm"><i class="icon-shape icon"></i><span>Appointment</span></a>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-close-cross"></i></button>
+                <a href="#" class="appointment" data-toggle="modal" data-target="#appointmentForm"><i class="fa fa-calendar"></i><span>&nbsp;&nbsp;&nbsp;Appointment</span></a>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></button>
 				</div>
 				<div class="modal-body">
 					<div class="container-fluid">
 						<h2>Schedule <span class="color">Auto Service</span></h2>
-						<p>To schedule an appointment with your friendly neighborhood experts at Car Repair Services, give us a call at 1-800-123-4567 or fill out the form below with your information and requested services. One of our team members will get back to you as soon as possible to confirm your appointment. </p>
+						<p>To schedule an appointment with your friendly neighborhood experts at Vehicle Services, give us a call at +94-711790370 or fill out the form below with your information and preferred date and time.</p>
 						<div class="divider"></div>
-						<form id="appointment-form" class="contact-form form-horizontal" name="contactform" method="post" novalidate>
+						<form id="appointment-form" class="contact-form form-horizontal" name="contactform" method="post" action="src/process.php">
 							<div id="successAppointment" class="successform">
 								<p>Your message was sent successfully!</p>
 							</div>
@@ -714,67 +465,52 @@
 							<h5>Contact information</h5>
 							<div class="form-inline">
 								<div>
-									<input type="text" name="name" class="form-control input-custom" value="" placeholder="First name">
+									<input type="text" name="name" class="form-control input-custom"  title="Please enter a valid first name e.g. : John" required value="" placeholder="First name">
 								</div>
 								<div>
-									<input type="text" name="lastname" class="form-control input-custom" value="" placeholder="Last name">
+									<input type="text" name="lastname" class="form-control input-custom" required value="" placeholder="Last name" title="Please enter a valid last name e.g. : Doe">
 								</div>
 							</div>
 							<div class="form-inline">
 								<div>
-									<input type="text" name="phone" class="form-control input-custom" value="" placeholder="Phone number">
+									<input type="tel" name="phone" class="form-control input-custom" required value="" placeholder="Phone number" title="Please enter a valid telephone number e.g. : 0711790370">
 								</div>
 								<div>
-									<input type="text" name="email" class="form-control input-custom" value="" placeholder="Your E-mail">
+									<input type="text" name="vehicleNo" class="form-control input-custom" required value="" placeholder="Vehicle number" title="Please enter a valid vehicle number e.g. : WP XXX-0000">
 								</div>
 							</div>
 							<div class="divider"></div>
 							<h5>Appointment details</h5>
 							<div class="form-inline">
-								<div class="datetimepicker-wrap">
-									<input type="text" name="date" class="form-control input-custom datetimepicker" placeholder="">
+								<div>
+									<input type="date" name="date" class="form-control input-custom" required placeholder="" title="Please select a date">
 								</div>
-								<div class="timepicker-wrap">
-									<input type="text" name="time" class="form-control input-custom timepicker" placeholder="">
+								<div>
+									<input type="time" name="time" class="form-control input-custom" required placeholder="" title="Please select a time">
 								</div>
 							</div>
+                            <h5>Vehicle details</h5>
 							<div class="form-inline">
 								<div>
-									<input name="autoinfo" type="text" class="form-control input-custom" value="" placeholder="Vehicle Year, Make and Model">
+                                	<select name="vehicle" class="form-control input-custom" required title="Please select your vehicle type">
+                                    	<option selected disabled>--Select your vehicle type--</option>
+                                        <option value="car">Car</option>
+                                        <option value="van">Van/ SUV</option>
+                                        <option value="bus">Bus</option>
+                                        <option value="wheel">Three Wheel</option>
+                                        <option value="bike">Bike</option>
+                                    </select>
 								</div>
-								<div class="form-inline">
-									<div class="select-wrapper">
-										<select name="select1" class="input-custom">
-											<option value="2000">2000</option>
-											<option value="2001">2001</option>
-											<option value="2002">2002</option>
-											<option value="2003">2003</option>
-											<option value="2004">2004</option>
-											<option value="2005">2005</option>
-											<option value="2006">2006</option>
-											<option value="2007">2007</option>
-											<option value="2008">2008</option>
-											<option value="2009">2009</option>
-											<option value="2010">2010</option>
-										</select>
-									</div>
-									<div>
-										<input name="kilometers" type="text" class="form-control input-custom" value="" placeholder="Current Kilometers">
-									</div>
+								<div>
+									<input name="model" type="text" class="form-control input-custom" value="" required placeholder="Vehicle Model" title="Please enter a valid vehicle model e.g. : Mazda RX8">
 								</div>
-							</div>
-							<div class="form-inline">
-								<textarea name="message" class="form-control textarea-custom" placeholder="Service Required"></textarea>
 							</div>
 							<div class="divider"></div>
 							<div class="row">
 								<div class="col-sm-4 col-md-3 bootstrap-datetimepicker-widget">
-									<button type="submit" id="submit" class="btn btn-lg"><span>SUBMIT</span></button>
+									<button type="submit" id="submit" class="btn btn-lg"><span>SCHEDULE</span></button>
 								</div>
 								<div class="divider visible-xs"></div>
-								<div class="col-sm-8 col-md-9">
-									<p><i>Please note that the date and time you requested may not be available. We will contact you to confirm your actual appointment details.</i></p>
-								</div>
 							</div>
 						</form>
 					</div>
@@ -799,7 +535,6 @@
 	<script src="js/jquery.waypoints.min.js"></script>
 	<script src="js/jquery.countTo.js"></script>
 	<script src="js/custom.js"></script>
-	<script src="js/forms.js"></script>
    	<script src="js/tool.js"></script>
 </body>
 </html>
