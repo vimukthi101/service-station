@@ -68,9 +68,9 @@
 							<div class="address">
 								Monday-Saturday <span class="custom-color">8:30AM - 5:30PM</span>
 							</div>
-							<a href="#" class="appointment" data-toggle="modal" data-target="#appointmentForm">
-                            	<i class="fa fa-calendar" aria-hidden="true"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;Appointment</span>
-                            </a>
+							<div class="appointment">
+                            	<span>SERVICE STATION</span>
+                            </div>
 						</div>
 						<div class="header-right-bottom">
 							<div class="header-phone">
@@ -140,7 +140,7 @@
 								<div class="negative-margin"><img src="images/banner-key.png" class="img-responsive" alt=""></div>
 							</div>
 							<div class="col-md-6 col-lg-4 action hidden-xs">
-								<a href="#" data-toggle="modal" data-target="#appointmentForm" class="btn btn-full btn-border appointment"><span>Schedule</span></a>
+								<a href="#schedule-appointment" class="btn btn-full btn-border appointment"><span>Schedule</span></a>
 							</div>
 						</div>
 					</div>
@@ -370,50 +370,8 @@
 			</div>
 		</div>
 		<!-- //Services Block -->
-		<!-- Statistics Block -->
-		<div class="block">
-			<div class="container">
-				<h2 class="h-lg text-center">Some Statistics <span class="color">About Us</span></h2>
-				<p class="info text-center">Auto Repair Technical Statistics You Must Know</p>
-				<div class="row" id="counterBlock">
-					<div class="col-sm-6 col-md-3">
-						<div class="stat-box">
-							<div><span class="number"><span class="count" data-to="5" data-speed="1000">5</span></span><span class="icon"><i class="fa fa-rocket"></i></span></div>
-							<div class="text">
-								<h5>Years of experience</h5>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<div class="stat-box">
-							<div><span class="number"><span class="count" data-to="32" data-speed="1000">10</span></span><span class="icon"><i class="fa fa-users"></i></span></div>
-							<div class="text">
-								<h5>Staff &amp; workers</h5>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<div class="stat-box">
-							<div><span class="number"><span class="count" data-to="100" data-speed="1000">100</span></span><span class="icon"><i class="fa fa-child"></i></span></div>
-							<div class="text">
-								<h5>Satisfied customers</h5>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<div class="stat-box">
-							<div><span class="number"><span class="count" data-to="150" data-speed="1000">150</span></span><span class="icon"><i class="fa fa-bus"></i></span></div>
-							<div class="text">
-								<h5>Vehicles Serviced</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- //Statistics Block -->
 		<!-- Appointment Block -->
-		<div class="block" id="schedule-appointment">
+		<div class="block">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
@@ -421,9 +379,6 @@
 							<h2 class="h-lg">Schedule <span class="color">Your Appointment</span> Today</h2>
 							<p class="info">Your Automotive Service Specialist</p>
 							<h2 class="h-phone">Call: +94-711790370</h2>
-							<div class="btn-inline">
-								<a class="btn btn-invert" href="#" data-toggle="modal" data-target="#appointmentForm"><span>Appointment</span></a>
-							</div>
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -436,89 +391,101 @@
 		</div>
 		<!-- //Appointment Block -->
 	</div>
+    <!-- Schedule Block -->
+<div class="block" id="schedule-appointment" style="padding-top:70px;">
+			<div class="container">
+				<div class="text-center">
+					<h2 class="h-lg">Schedule <span class="color">Auto Service</span></h2>
+					<p class="info">To schedule an appointment with your friendly neighborhood experts at Vehicle Services, give us a call at +94-711790370 or fill out the form below with your information and preferred date and time.</p>
+				</div>
+            </div>
+            <div class="container">
+				<div>
+					<?php
+						if(isset($_GET['error'])){
+							$error = $_GET['error'];
+							if($error == 1){
+								echo '<p style="color:rgb(255,0,0);">Form was not submitted. Please fill the form and submit.</p>';
+							} else if($error == 2){
+								echo '<p style="color:rgb(255,0,0);">Mandatory fields cannot be empty.</p>';
+							} else if($error == 3){
+								echo '<p style="color:rgb(255,0,0);">Please enter a valid first name e.g. : John</p>';
+							} else if($error == 4){
+								echo '<p style="color:rgb(255,0,0);">Please enter a valid last name e.g. : Doe</p>';
+							} else if($error == 5){
+								echo '<p style="color:rgb(255,0,0);">Please enter a valid telephone number e.g. : 0711790370</p>';
+							} else if($error == 6){
+								echo '<p style="color:rgb(255,0,0);">Please enter a valid vehicle number e.g. : WP XXX-0000</p>';
+							} else if($error == 7){
+								echo '<p style="color:rgb(255,0,0);">Please select a vehicle format.</p>';
+							} else if($error == 8){
+								echo '<p style="color:rgb(255,0,0);">Please enter a valid vehicle model e.g. : Mazda RX8</p>';
+							} else if($error == 9){
+								echo '<p style="color:rgb(255,0,0);">Sorry we are closed on Sundays.</p>';
+							} else if($error == 10){
+								echo '<p style="color:rgb(255,0,0);">Sorry we are open from 08:30 AM to 05:30 PM only.</p>';
+							}
+						}
+					?>
+				</div>
+            </div>
+            <div class="container">
+            	<div class="col-md-12">
+                    <div class="divider"></div>
+                    <div class="row">
+                        <form class="contact-form form-horizontal" enctype="multipart/form-data" role="form" method="post" action="src/process.php">
+                            <h5>Contact information</h5>
+                            <div>
+                                <input type="text" name="name" class="form-control input-custom"  title="Please enter a valid first name e.g. : John" required value="" pattern="(([A-Z])|([a-z]))+" placeholder="First name*">
+                            </div>
+                            <div>
+                                <input type="text" name="lastname" class="form-control input-custom" required value="" placeholder="Last name*" title="Please enter a valid last name e.g. : Doe" pattern="(([A-Z])|([a-z]))+">
+                            </div>
+                            <div>
+                                <input type="tel" name="phone" class="form-control input-custom" required value="" placeholder="Phone number*" title="Please enter a valid telephone number e.g. : 0711790370" pattern="^[0-9]{10}$">
+                            </div>
+                            <div>
+                                <input type="text" name="vehicleNo" class="form-control input-custom" required value="" placeholder="Vehicle number*" title="Please enter a valid vehicle number e.g. : WP XXX-0000" pattern="^\w+.\w+-\w+$">
+                            </div>
+                            <div class="divider"></div>
+                            <h5>Vehicle details</h5>
+                            <div>
+                                <select name="vehicle" class="form-control input-custom" required title="Please select your vehicle type">
+                                    <option selected disabled>--Select your vehicle type (approximate time for each type is mentioned)--</option>
+                                    <option value="car">Car (2.5 h)</option>
+                                    <option value="van">Van/ SUV (2.5 h)</option>
+                                    <option value="bus">Bus (6 h)</option>
+                                    <option value="wheel">Three Wheel (1 h)</option>
+                                    <option value="bike">Bike (2.5 h)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input name="model" type="text" class="form-control input-custom" value="" required placeholder="Vehicle Model*" title="Please enter a valid vehicle model e.g. : Mazda RX8" pattern="^(\b\s\b|\w)+$">
+                            </div>
+                            <div class="divider"></div>
+                            <h5>Appointment details</h5>
+                            <div>
+                                <input type="date" name="date" class="form-control input-custom" required placeholder="" title="Please select a date. We are closed on Sundays.">
+                            </div>
+                            <div>
+                                <input type="time" name="time" class="form-control input-custom" required placeholder="" title="Please select a time. We are open from 08:30 AM to 05:30 PM only.">
+                            </div>
+                            <div class="divider"></div>
+                            <div class="text-center">
+                                <button type="submit" name="submit" id="submit" class="btn btn-lg"><span>SCHEDULE</span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<!-- //Schedule Block -->
 	<!-- // Content  -->
 	<!-- Footer -->
     <div class="col-md-12 text-center" style="background-color:rgb(0,0,0);padding:15px;height:8vh;">
         <font class="color" face="Verdana, Geneva, sans-serif">All Rights Reserved <a href="www.striking.lk" class="color">Striking Solutions</a> &copy; <?php $year = getdate(); echo $year['year']; ?></font>
     </div>
 	<!-- //Footer -->
-	<!-- Appointment Form -->
-	<div class="modal fade" id="appointmentForm">
-		<div class="modal-dialog container">
-			<div class="modal-content">
-				<div class="modal-header">
-                <a href="#" class="appointment" data-toggle="modal" data-target="#appointmentForm"><i class="fa fa-calendar"></i><span>&nbsp;&nbsp;&nbsp;Appointment</span></a>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></button>
-				</div>
-				<div class="modal-body">
-					<div class="container-fluid">
-						<h2>Schedule <span class="color">Auto Service</span></h2>
-						<p>To schedule an appointment with your friendly neighborhood experts at Vehicle Services, give us a call at +94-711790370 or fill out the form below with your information and preferred date and time.</p>
-						<div class="divider"></div>
-						<form id="appointment-form" class="contact-form form-horizontal" name="contactform" method="post" action="src/process.php">
-							<div id="successAppointment" class="successform">
-								<p>Your message was sent successfully!</p>
-							</div>
-							<div id="errorAppointment" class="errorform">
-								<p>Something went wrong, try refreshing and submitting the form again.</p>
-							</div>
-							<h5>Contact information</h5>
-							<div class="form-inline">
-								<div>
-									<input type="text" name="name" class="form-control input-custom"  title="Please enter a valid first name e.g. : John" required value="" placeholder="First name">
-								</div>
-								<div>
-									<input type="text" name="lastname" class="form-control input-custom" required value="" placeholder="Last name" title="Please enter a valid last name e.g. : Doe">
-								</div>
-							</div>
-							<div class="form-inline">
-								<div>
-									<input type="tel" name="phone" class="form-control input-custom" required value="" placeholder="Phone number" title="Please enter a valid telephone number e.g. : 0711790370">
-								</div>
-								<div>
-									<input type="text" name="vehicleNo" class="form-control input-custom" required value="" placeholder="Vehicle number" title="Please enter a valid vehicle number e.g. : WP XXX-0000">
-								</div>
-							</div>
-							<div class="divider"></div>
-							<h5>Appointment details</h5>
-							<div class="form-inline">
-								<div>
-									<input type="date" name="date" class="form-control input-custom" required placeholder="" title="Please select a date">
-								</div>
-								<div>
-									<input type="time" name="time" class="form-control input-custom" required placeholder="" title="Please select a time">
-								</div>
-							</div>
-                            <h5>Vehicle details</h5>
-							<div class="form-inline">
-								<div>
-                                	<select name="vehicle" class="form-control input-custom" required title="Please select your vehicle type">
-                                    	<option selected disabled>--Select your vehicle type--</option>
-                                        <option value="car">Car</option>
-                                        <option value="van">Van/ SUV</option>
-                                        <option value="bus">Bus</option>
-                                        <option value="wheel">Three Wheel</option>
-                                        <option value="bike">Bike</option>
-                                    </select>
-								</div>
-								<div>
-									<input name="model" type="text" class="form-control input-custom" value="" required placeholder="Vehicle Model" title="Please enter a valid vehicle model e.g. : Mazda RX8">
-								</div>
-							</div>
-							<div class="divider"></div>
-							<div class="row">
-								<div class="col-sm-4 col-md-3 bootstrap-datetimepicker-widget">
-									<button type="submit" id="submit" class="btn btn-lg"><span>SCHEDULE</span></button>
-								</div>
-								<div class="divider visible-xs"></div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //Appointment Form -->
 	<script type="text/javascript" charset="UTF-8" src="js/common.js"></script>
 	<script type="text/javascript" charset="UTF-8" src="js/map.js"></script>
 	<script type="text/javascript" charset="UTF-8" src="js/util.js"></script>
