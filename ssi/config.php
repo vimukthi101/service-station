@@ -1,5 +1,5 @@
 <?php
-//different types of vehicle types. 0 -> type, 1 -> number of points, 2 -> duration 
+//different types of vehicle types. 0 -> type, 1 -> number of points, 2 -> duration in minutes
 $vehicle_types = array
   (
 	  array(

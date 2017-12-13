@@ -421,9 +421,13 @@
 							} else if($error == 8){
 								echo '<p style="color:rgb(255,0,0);">Please enter a valid vehicle model e.g. : Mazda RX8</p>';
 							} else if($error == 9){
-								echo '<p style="color:rgb(255,0,0);">Sorry we are closed on Sundays.</p>';
+								echo '<p style="color:rgb(255,0,0);">Sorry, we are closed on Sundays.</p>';
 							} else if($error == 10){
-								echo '<p style="color:rgb(255,0,0);">Sorry we are open from 08:30 AM to 05:30 PM only.</p>';
+								echo '<p style="color:rgb(255,0,0);">Sorry, we are open from 08:30 AM to 05:30 PM only.</p>';
+							} else if($error == 11){
+								echo '<p style="color:rgb(255,0,0);">Sorry, already the time is booked.</p>';
+							} else if($error == 12){
+								echo '<p style="color:rgb(255,0,0);">Sorry, please try again later.</p>';
 							}
 						}
 					?>

@@ -29,11 +29,26 @@ if(isset($_POST['submit'])){
 												$available_points = $vehicle_types[$i]['points'];
 												$duration_for_service = $vehicle_types[$i]['duration'];
 												//booked time (start time) + duration = end time, search from mysql table for existing records. with relevant to the number of points
-												echo $available_points.' '.$duration_for_service;die();
+												$end_time = date("H:i", strtotime($time." + ".$duration_for_service." minutes"));
+												$query = "SELECT * FROM service_schedule WHERE DATE='".$date."' AND ((start_time BETWEEN '".$time.":00' AND '".$end_time.":00') OR (end_time BETWEEN '".$time.":00' AND '".$end_time.":00')) AND vehicle_type='".$vehicle."'";
+												$result = mysqli_query($con, $query);
+												if(mysqli_num_rows($result) < $available_points){
+													//no existing bookings, proceed
+													$point_to_service = $available_points - mysqli_num_rows($result);
+													$insert = "INSERT INTO service_schedule (first_name, last_name, phone_no, vehicle_no, DATE, start_time, vehicle_type, vehicle_model, POINT, end_time) VALUES ('".$name."','".$lastname."','".$phone."','".$vehicleNo."','".$date."','".$time."','".$vehicle."','".$model."','".$point_to_service."','".$end_time."')";
+													if(mysqli_query($con, $insert)){
+														//successfully added
+														header('Location:bookingView.php?date='.$date.'&time='.$time.'&name='.$name.'&last='.$lastname.'&phone='.$phone.'&vehicle='.$vehicleNo.'&end='.$end_time.'');
+													} else {
+														//failed to add
+														header('Location:../index.php?error=12#schedule-appointment');	
+													}
+												} else {
+													//booking exists
+													header('Location:../index.php?error=11#schedule-appointment');
+												}
 											}
 										}
-										//not matching vehicle type
-										header('Location:../index.php?error=7#schedule-appointment');
 									} else {
 										//not within open close times
 										header('Location:../index.php?error=10#schedule-appointment');	
