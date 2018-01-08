@@ -88,6 +88,9 @@
 								<li class="active">
                                 	<a href="#"><span>Home</span></a>
                                 </li>
+                                <li>
+                                	<a href="#schedule-appointment"><span>Schedule</span></a>
+                                </li>
 								<li>
                                 	<a href="#what-we-do"><span>What We Do</span></a>
                                 </li>
@@ -99,9 +102,6 @@
                                 </li>
 								<li>
                                 	<a href="#why-choose-us"><span>Why Choose Us</span></a>
-                                </li>
-								<li>
-                                	<a href="#schedule-appointment"><span>Schedule</span></a>
                                 </li>
 							</ul>
 						</div>
@@ -148,6 +148,112 @@
 			</div>
 		</div>
 		<!-- // Under Slider Banner -->
+        <!-- Schedule Block -->
+<div class="block" id="schedule-appointment" style="padding-top:70px;">
+			<div class="container">
+				<div class="text-center">
+					<h2 class="h-lg">Schedule <span class="color">Auto Service</span></h2>
+					<p class="info">To schedule an appointment with your friendly neighborhood experts at Vehicle Services, give us a call at +94-711790370 or fill out the form below with your information and preferred date and time.</p>
+				</div>
+            </div>
+            <div class="container">
+				<div>
+					<?php
+						if(isset($_GET['error'])){
+							$error = $_GET['error'];
+							if($error == 1){
+								echo '<p style="color:rgb(255,0,0);">Form was not submitted. Please fill the form and submit.</p>';
+							} else if($error == 2){
+								echo '<p style="color:rgb(255,0,0);">Mandatory fields cannot be empty.</p>';
+							} else if($error == 3){
+								echo '<p style="color:rgb(255,0,0);">Please enter a valid first name e.g. : John</p>';
+							} else if($error == 4){
+								echo '<p style="color:rgb(255,0,0);">Please enter a valid last name e.g. : Doe</p>';
+							} else if($error == 5){
+								echo '<p style="color:rgb(255,0,0);">Please enter a valid telephone number e.g. : 0711790370</p>';
+							} else if($error == 6){
+								echo '<p style="color:rgb(255,0,0);">Please enter a valid vehicle number e.g. : WP XXX-0000</p>';
+							} else if($error == 7){
+								echo '<p style="color:rgb(255,0,0);">Please select a vehicle format.</p>';
+							} else if($error == 9){
+								echo '<p style="color:rgb(255,0,0);">Sorry, we are closed on Sundays.</p>';
+							} else if($error == 10){
+								echo '<p style="color:rgb(255,0,0);">Sorry, we are open from 08:30 AM to 05:30 PM only.</p>';
+							} else if($error == 11){
+								echo '<p style="color:rgb(255,0,0);">Sorry, already the time is booked.</p>';
+							} else if($error == 12){
+								echo '<p style="color:rgb(255,0,0);">Sorry, please try again later.</p>';
+							}
+						}
+					?>
+				</div>
+            </div>
+            <div class="container">
+            	<div class="col-md-12">
+                    <div class="divider"></div>
+                    <div class="row">
+                        <form class="contact-form form-horizontal" enctype="multipart/form-data" role="form" method="post" action="src/process.php">
+                            <h5>Contact information</h5>
+                            <div>
+                            	<div class="col-md-6">
+                                <input type="text" name="name" class="form-control input-custom"  title="Please enter a valid first name e.g. : John" required value="" pattern="(([A-Z])|([a-z]))+" placeholder="First name*">
+                                </div>
+                                <div class="col-md-6">
+                                <input type="text" name="lastname" class="form-control input-custom" required value="" placeholder="Last name*" title="Please enter a valid last name e.g. : Doe" pattern="(([A-Z])|([a-z]))+">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="col-md-6">
+                                    <input type="tel" name="phone" class="form-control input-custom" required value="" placeholder="Phone number*" title="Please enter a valid telephone number e.g. : 0711790370" pattern="^[0-9]{10}$">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="vehicleNo" class="form-control input-custom" required value="" placeholder="Vehicle number*" title="Please enter a valid vehicle number e.g. : WP XXX-0000" pattern="^\w+.\w+-\w+$">
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>Vehicle details</h5>
+                            <div>
+                                <div class="col-md-6">
+                                    <select name="vehicle" class="form-control input-custom" required title="Please select your vehicle type">
+                                        <option selected disabled>--Select your vehicle type (approximate time for each type is mentioned)--</option>
+                                        <option value="car">Car (2.5 h)</option>
+                                        <option value="van">Van/ SUV (2.5 h)</option>
+                                        <option value="bus">Bus (6 h)</option>
+                                        <option value="wheel">Three Wheel (1 h)</option>
+                                        <option value="bike">Bike (2.5 h)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="model" class="form-control input-custom" required title="Please select your vehicle model">
+                                        <option selected disabled>--Select your vehicle model--</option>
+                                        <option value="Bajaj">Bajaj</option>
+                                        <option value="Toyota">Toyota</option>
+                                        <option value="Mazda">Mazda</option>
+                                        <option value="Tata">Tata</option>
+                                        <option value="Piajio">Piajio</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>Appointment details</h5>
+                            <div>
+                                <div class="col-md-6">
+                                    <input type="date" name="date" class="form-control input-custom" required placeholder="" title="Please select a date. We are closed on Sundays.">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="time" name="time" class="form-control input-custom" required placeholder="" title="Please select a time. We are open from 08:30 AM to 05:30 PM only.">
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="text-center">
+                                <button type="submit" name="submit" id="submit" class="btn btn-lg"><span>SCHEDULE</span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<!-- //Schedule Block -->
 		<!-- Services Banner Block -->
 		<div class="block" id="what-we-do" style="padding-top:70px;padding-bottom:30px;">
 			<div class="container">
@@ -391,99 +497,6 @@
 		</div>
 		<!-- //Appointment Block -->
 	</div>
-    <!-- Schedule Block -->
-<div class="block" id="schedule-appointment" style="padding-top:70px;">
-			<div class="container">
-				<div class="text-center">
-					<h2 class="h-lg">Schedule <span class="color">Auto Service</span></h2>
-					<p class="info">To schedule an appointment with your friendly neighborhood experts at Vehicle Services, give us a call at +94-711790370 or fill out the form below with your information and preferred date and time.</p>
-				</div>
-            </div>
-            <div class="container">
-				<div>
-					<?php
-						if(isset($_GET['error'])){
-							$error = $_GET['error'];
-							if($error == 1){
-								echo '<p style="color:rgb(255,0,0);">Form was not submitted. Please fill the form and submit.</p>';
-							} else if($error == 2){
-								echo '<p style="color:rgb(255,0,0);">Mandatory fields cannot be empty.</p>';
-							} else if($error == 3){
-								echo '<p style="color:rgb(255,0,0);">Please enter a valid first name e.g. : John</p>';
-							} else if($error == 4){
-								echo '<p style="color:rgb(255,0,0);">Please enter a valid last name e.g. : Doe</p>';
-							} else if($error == 5){
-								echo '<p style="color:rgb(255,0,0);">Please enter a valid telephone number e.g. : 0711790370</p>';
-							} else if($error == 6){
-								echo '<p style="color:rgb(255,0,0);">Please enter a valid vehicle number e.g. : WP XXX-0000</p>';
-							} else if($error == 7){
-								echo '<p style="color:rgb(255,0,0);">Please select a vehicle format.</p>';
-							} else if($error == 8){
-								echo '<p style="color:rgb(255,0,0);">Please enter a valid vehicle model e.g. : Mazda RX8</p>';
-							} else if($error == 9){
-								echo '<p style="color:rgb(255,0,0);">Sorry, we are closed on Sundays.</p>';
-							} else if($error == 10){
-								echo '<p style="color:rgb(255,0,0);">Sorry, we are open from 08:30 AM to 05:30 PM only.</p>';
-							} else if($error == 11){
-								echo '<p style="color:rgb(255,0,0);">Sorry, already the time is booked.</p>';
-							} else if($error == 12){
-								echo '<p style="color:rgb(255,0,0);">Sorry, please try again later.</p>';
-							}
-						}
-					?>
-				</div>
-            </div>
-            <div class="container">
-            	<div class="col-md-12">
-                    <div class="divider"></div>
-                    <div class="row">
-                        <form class="contact-form form-horizontal" enctype="multipart/form-data" role="form" method="post" action="src/process.php">
-                            <h5>Contact information</h5>
-                            <div>
-                                <input type="text" name="name" class="form-control input-custom"  title="Please enter a valid first name e.g. : John" required value="" pattern="(([A-Z])|([a-z]))+" placeholder="First name*">
-                            </div>
-                            <div>
-                                <input type="text" name="lastname" class="form-control input-custom" required value="" placeholder="Last name*" title="Please enter a valid last name e.g. : Doe" pattern="(([A-Z])|([a-z]))+">
-                            </div>
-                            <div>
-                                <input type="tel" name="phone" class="form-control input-custom" required value="" placeholder="Phone number*" title="Please enter a valid telephone number e.g. : 0711790370" pattern="^[0-9]{10}$">
-                            </div>
-                            <div>
-                                <input type="text" name="vehicleNo" class="form-control input-custom" required value="" placeholder="Vehicle number*" title="Please enter a valid vehicle number e.g. : WP XXX-0000" pattern="^\w+.\w+-\w+$">
-                            </div>
-                            <div class="divider"></div>
-                            <h5>Vehicle details</h5>
-                            <div>
-                                <select name="vehicle" class="form-control input-custom" required title="Please select your vehicle type">
-                                    <option selected disabled>--Select your vehicle type (approximate time for each type is mentioned)--</option>
-                                    <option value="car">Car (2.5 h)</option>
-                                    <option value="van">Van/ SUV (2.5 h)</option>
-                                    <option value="bus">Bus (6 h)</option>
-                                    <option value="wheel">Three Wheel (1 h)</option>
-                                    <option value="bike">Bike (2.5 h)</option>
-                                </select>
-                            </div>
-                            <div>
-                                <input name="model" type="text" class="form-control input-custom" value="" required placeholder="Vehicle Model*" title="Please enter a valid vehicle model e.g. : Mazda RX8" pattern="^(\b\s\b|\w)+$">
-                            </div>
-                            <div class="divider"></div>
-                            <h5>Appointment details</h5>
-                            <div>
-                                <input type="date" name="date" class="form-control input-custom" required placeholder="" title="Please select a date. We are closed on Sundays.">
-                            </div>
-                            <div>
-                                <input type="time" name="time" class="form-control input-custom" required placeholder="" title="Please select a time. We are open from 08:30 AM to 05:30 PM only.">
-                            </div>
-                            <div class="divider"></div>
-                            <div class="text-center">
-                                <button type="submit" name="submit" id="submit" class="btn btn-lg"><span>SCHEDULE</span></button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-			</div>
-		</div>
-		<!-- //Schedule Block -->
 	<!-- // Content  -->
 	<!-- Footer -->
     <div class="col-md-12 text-center" style="background-color:rgb(0,0,0);padding:15px;height:8vh;">
