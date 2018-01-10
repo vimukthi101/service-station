@@ -61,8 +61,8 @@
                     	<span style="color:rgb(255,255,255);">Select Language</span>
                     	<div class="form-group">
                             <select onchange="location = this.value;" id="language" name="language" class="form-control" style="background-color:#00bffe;height: 35px;font-size: 14px;">
+                            	<option value="index-sinhala.php">Sinhala</option>
                             	<option value="index.php">English</option>
-                                <option value="index-sinhala.php">Sinhala</option>
                             </select>
                         </div>
 						<!-- <a href="">

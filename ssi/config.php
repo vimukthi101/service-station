@@ -32,4 +32,20 @@ $vehicle_types = array
 $open_closed_times = array("08:30","17:30");
 //closed days list sunday =0
 $closed_days = array(0);
+//closed days of the month
+$closed_days_month = array
+  (
+	  array(
+	  	'month' => "01",
+		'days' => array("02","05","23")
+	  ),
+	  array(
+	  	'month' => "08",
+		'days' => array("11")
+	  ),
+	  array(
+	  	'month' => "11",
+		'days' => array("09","16")
+	  )
+  );
 ?>

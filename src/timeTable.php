@@ -1,3 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Service Station</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/bootstrap-submenu.css" rel="stylesheet">
+<link href="../css/animate.min.css" rel="stylesheet">
+<link href="../css/slick.css" rel="stylesheet">	
+<link href="../css/custom.css" rel="stylesheet">
+<link href="../css/color-violet.css" rel="stylesheet">
+<link href="../css/color-blue.css" rel="stylesheet">
+<link href="../css/color-green.css" rel="stylesheet">
+<link href="../css/bootstrap-datetimepicker.css" rel="stylesheet">
+<link href="../css/tools.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <?php
 include_once('../ssi/db.php');
 ?>
@@ -106,305 +123,72 @@ body {
   }
 }
 </style>
-<div class="wrapper">
-  <div class="table">
-  	<?php
-		$date = date('Y-m-d');
-		$query_1 = "SELECT * FROM service_schedule WHERE DATE='".$date."' AND (vehicle_type='car' OR vehicle_type='wheel' OR vehicle_type='bike') AND POINT='1'";
-		$result_1 = mysqli_query($con, $query_1);
-		if(mysqli_num_rows($result_1)!=0){
-			echo '<div class="row header">
-					<h3>POINT 01</h3>
-				</div>
-				<div class="row header">
-				  <div class="cell">
-					Vehicle No
-				  </div>
-				  <div class="cell">
-					Vehicle Type
-				  </div>
-				  <div class="cell">
-					Vehicle Model
-				  </div>
-				  <div class="cell">
-					Phone No
-				  </div>
-				  <div class="cell">
-					Name
-				  </div>
-				  <div class="cell">
-					Date
-				  </div>
-				  <div class="cell">
-					Start Time
-				  </div>
-				  <div class="cell">
-					Approximate End Time
-				  </div>
-				</div>';
-			while($row_1 = mysqli_fetch_array($result_1)){
-				$fName_1 = $row_1['first_name'];
-				$lName_1 = $row_1['last_name'];
-				$pNo_1 = $row_1['phone_no'];
-				$vNo_1 = $row_1['vehicle_no'];
-				$date_1 = $row_1['date'];
-				$sTime_1 = $row_1['start_time'];
-				$vType_1 = $row_1['vehicle_type'];
-				$vModel_1 = $row_1['vehicle_model']; 
-				$eTime_1 = $row_1['end_time']; 
-				echo '<div class="row">
-					  <div class="cell" data-title="Name">
-						'.$vNo_1.'
-					  </div>
-					  <div class="cell" data-title="Age">
-						'.$vType_1.'
-					  </div>
-					  <div class="cell" data-title="Occupation">
-						'.$vModel_1.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$pNo_1.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$fName_1.' '.$lName_1.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$date_1.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$sTime_1.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$eTime_1.'
-					  </div>
-					</div>';
-			}
-		}
-	?>
-  </div>
-  
-  <div class="table">
-  	<?php
-		$query_2 = "SELECT * FROM service_schedule WHERE DATE='".$date."' AND (vehicle_type='car' OR vehicle_type='wheel' OR vehicle_type='bike') AND POINT='2'";
-		$result_2 = mysqli_query($con, $query_2);
-		if(mysqli_num_rows($result_2)!=0){
-			echo '<div class="row header green">
-					<h3>POINT 02</h3>
-				</div>
-				<div class="row header green">
-				  <div class="cell">
-					Vehicle No
-				  </div>
-				  <div class="cell">
-					Vehicle Type
-				  </div>
-				  <div class="cell">
-					Vehicle Model
-				  </div>
-				  <div class="cell">
-					Phone No
-				  </div>
-				  <div class="cell">
-					Name
-				  </div>
-				  <div class="cell">
-					Date
-				  </div>
-				  <div class="cell">
-					Start Time
-				  </div>
-				  <div class="cell">
-					Approximate End Time
-				  </div>
-				</div>';
-			while($row_2 = mysqli_fetch_array($result_2)){
-				$fName_2 = $row_2['first_name'];
-				$lName_2 = $row_2['last_name'];
-				$pNo_2 = $row_2['phone_no'];
-				$vNo_2 = $row_2['vehicle_no'];
-				$date_2 = $row_2['date'];
-				$sTime_2 = $row_2['start_time'];
-				$vType_2 = $row_2['vehicle_type'];
-				$vModel_2 = $row_2['vehicle_model']; 
-				$eTime_2 = $row_2['end_time']; 
-				echo '<div class="row">
-					  <div class="cell" data-title="Name">
-						'.$vNo_2.'
-					  </div>
-					  <div class="cell" data-title="Age">
-						'.$vType_2.'
-					  </div>
-					  <div class="cell" data-title="Occupation">
-						'.$vModel_2.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$pNo_2.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$fName_2.' '.$lName_2.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$date_2.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$sTime_2.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$eTime_2.'
-					  </div>
-					</div>';
-			}
-		}
-	?>
-  </div>
-  
-  <div class="table">
-    <?php
-		$query_3 = "SELECT * FROM service_schedule WHERE DATE='".$date."' AND vehicle_type='van'";
-		$result_3 = mysqli_query($con, $query_3);
-		if(mysqli_num_rows($result_3)!=0){
-			echo '<div class="row header blue">
-					<h3>POINT 03</h3>
-				</div>
-				<div class="row header blue">
-				  <div class="cell">
-					Vehicle No
-				  </div>
-				  <div class="cell">
-					Vehicle Type
-				  </div>
-				  <div class="cell">
-					Vehicle Model
-				  </div>
-				  <div class="cell">
-					Phone No
-				  </div>
-				  <div class="cell">
-					Name
-				  </div>
-				  <div class="cell">
-					Date
-				  </div>
-				  <div class="cell">
-					Start Time
-				  </div>
-				  <div class="cell">
-					Approximate End Time
-				  </div>
-				</div>';
-			while($row_3 = mysqli_fetch_array($result_3)){
-				$fName_3 = $row_3['first_name'];
-				$lName_3 = $row_3['last_name'];
-				$pNo_3 = $row_3['phone_no'];
-				$vNo_3 = $row_3['vehicle_no'];
-				$date_3 = $row_3['date'];
-				$sTime_3 = $row_3['start_time'];
-				$vType_3 = $row_3['vehicle_type'];
-				$vModel_3 = $row_3['vehicle_model']; 
-				$eTime_3 = $row_3['end_time']; 
-				echo '<div class="row">
-					  <div class="cell" data-title="Name">
-						'.$vNo_3.'
-					  </div>
-					  <div class="cell" data-title="Age">
-						'.$vType_3.'
-					  </div>
-					  <div class="cell" data-title="Occupation">
-						'.$vModel_3.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$pNo_3.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$fName_3.' '.$lName_3.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$date_3.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$sTime_3.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$eTime_3.'
-					  </div>
-					</div>';
-			}
-		}
-	?>
-  </div>
-  
-  <div class="table">
-    <?php
-		$query_4 = "SELECT * FROM service_schedule WHERE DATE='".$date."' AND vehicle_type='bus'";
-		$result_4 = mysqli_query($con, $query_4);
-		if(mysqli_num_rows($result_4)!=0){
-			echo '<div class="row header yellow">
-					<h3>POINT 04</h3>
-				</div>
-				<div class="row header yellow">
-				  <div class="cell">
-					Vehicle No
-				  </div>
-				  <div class="cell">
-					Vehicle Type
-				  </div>
-				  <div class="cell">
-					Vehicle Model
-				  </div>
-				  <div class="cell">
-					Phone No
-				  </div>
-				  <div class="cell">
-					Name
-				  </div>
-				  <div class="cell">
-					Date
-				  </div>
-				  <div class="cell">
-					Start Time
-				  </div>
-				  <div class="cell">
-					Approximate End Time
-				  </div>
-				</div>';
-			while($row_4 = mysqli_fetch_array($result_4)){
-				$fName_4 = $row_4['first_name'];
-				$lName_4 = $row_4['last_name'];
-				$pNo_4 = $row_4['phone_no'];
-				$vNo_4 = $row_4['vehicle_no'];
-				$date_4 = $row_4['date'];
-				$sTime_4 = $row_4['start_time'];
-				$vType_4 = $row_4['vehicle_type'];
-				$vModel_4 = $row_4['vehicle_model']; 
-				$eTime_4 = $row_4['end_time']; 
-				echo '<div class="row">
-					  <div class="cell" data-title="Name">
-						'.$vNo_4.'
-					  </div>
-					  <div class="cell" data-title="Age">
-						'.$vType_4.'
-					  </div>
-					  <div class="cell" data-title="Occupation">
-						'.$vModel_4.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$pNo_4.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$fName_4.' '.$lName_4.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$date_4.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$sTime_4.'
-					  </div>
-					  <div class="cell" data-title="Location">
-						'.$eTime_4.'
-					  </div>
-					</div>';
-			}
-		}
-	?>
-  </div>
+</head>
+<body style="background-image:url(../images/4.jpg);background-repeat:no-repeat;background-size:cover;">
+<div>
+    <div>
+        <form class="contact-form form-horizontal" enctype="multipart/form-data" role="form" method="post" action="">
+        <div class="col-md-12">
+            <div class="col-md-5">
+            	<label>Select The Date :</label>
+                <input type="date" id="date" name="date" class="form-control input-custom" required placeholder="" title="Please select a date.">
+            </div>
+            <div class="col-md-5">
+            	<label>Select The Service Point :</label>
+                <select name="point" id="point" class="form-control input-custom">
+                	<option value="1">Point 01</option>
+                    <option value="2">Point 02</option>
+                    <option value="3">Point 03</option>
+                    <option value="4">Point 04</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+            	<label>&nbsp;</label>
+                <input type="button" value="Search" class="form-control input-custom btn-success" onClick="showHint(document.getElementById('date').value, document.getElementById('point').value);"/>
+            </div>
+        </div>
+        </form>
+    </div>
 </div>
+<script>
+function showHint(str, id) {
+	if (str.length == 0) { 
+		document.getElementById("txtHint").innerHTML = "";
+		return;
+	} else {
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+			}
+		};
+		xmlhttp.open("GET", "getTimeTableInfo.php?q=" + str + "&r=" + id, true);
+		xmlhttp.send();
+	}
+}
+</script>
+<div class="form-horizontal">
+    <div style="padding:50px;margin-top:100px;" id="txtHint"></div>
+</div>
+<div class="col-md-12 text-center navbar-fixed-bottom" style="background-color:rgb(0,0,0);padding:15px;height:8vh;">
+    <font class="color" face="Verdana, Geneva, sans-serif">All Rights Reserved <a href="www.striking.lk" class="color">Striking Solutions</a> &copy; <?php $year = getdate(); echo $year['year']; ?></font>
+</div>
+<script type="text/javascript" charset="UTF-8" src="../js/common.js"></script>
+<script type="text/javascript" charset="UTF-8" src="../js/map.js"></script>
+<script type="text/javascript" charset="UTF-8" src="../js/util.js"></script>
+<script type="text/javascript" charset="UTF-8" src="../js/marker.js"></script>
+<script type="text/javascript" charset="UTF-8" src="../js/onion.js"></script>
+<script type="text/javascript" charset="UTF-8" src="../js/controls.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/slick.min.js"></script>
+<script src="../js/jquery.form.js"></script>
+<script src="../js/jquery.validate.min.js"></script>
+<script src="../js/moment.js"></script>
+<script src="../js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="../js/jquery.countTo.js"></script>
+<script src="../js/custom.js"></script>
+<script src="../js/tool.js"></script>
+</body>
+</html>
