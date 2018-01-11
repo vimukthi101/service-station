@@ -58,6 +58,7 @@
 			<div class="container">
 				<div class="header-row">				
                 	<div class="logo">
+                    <!--
                     	<span style="color:rgb(255,255,255);">Select Language</span>
                     	<div class="form-group">
                             <select onchange="location = this.value;" id="language" name="language" class="form-control" style="background-color:#00bffe;height: 35px;font-size: 14px;">
@@ -65,9 +66,9 @@
                                 <option value="index-sinhala.php">Sinhala</option>
                             </select>
                         </div>
-						<!-- <a href="">
+						<a href="">
 							logo goes here
-						</a> -->
+						</a>-->
 					</div>
 					<div class="header-right">
 						<button type="button" class="navbar-toggle"><i class="icon icon-lines-menu"></i></button>
