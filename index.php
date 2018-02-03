@@ -22,7 +22,8 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
-<body class="home color-blue">	<div class="tools">
+<body class="home color-blue table-responsive">	
+	<div class="tools">
 		<span class="toggle">
         <img src="images/color-icon.png" class="img-responsive" alt=""></span>
 		<a href="index.php#" class="color-yellow">Yellow</a>
@@ -58,21 +59,13 @@
 			<div class="container">
 				<div class="header-row">				
                 	<div class="logo">
-                    <!--
-                    	<span style="color:rgb(255,255,255);">Select Language</span>
-                    	<div class="form-group">
-                            <select onchange="location = this.value;" id="language" name="language" class="form-control" style="background-color:#00bffe;height: 35px;font-size: 14px;">
-                            	<option value="index.php">English</option>
-                                <option value="index-sinhala.php">Sinhala</option>
-                            </select>
-                        </div>
-						<a href="">
-							logo goes here
-						</a>-->
+                    
 					</div>
 					<div class="header-right">
-						<button type="button" class="navbar-toggle"><i class="icon icon-lines-menu"></i></button>
-						<div class="header-right-top">
+                    	<div>
+							<button type="button" class="navbar-toggle"><i class="icon icon-lines-menu"></i></button>
+						</div>
+                        <div class="header-right-top">
 							<div class="address">
 								Monday-Saturday <span class="custom-color">8:30AM - 5:30PM</span>
 							</div>
@@ -120,18 +113,18 @@
 	</header>
 	<!-- // Header -->
 	<!-- Slider -->
-	<div id="mainSliderWrapper">
-		<div id="mainSlider" class="slick-initialized slick-slider" style="height: 589px;background-image:url(images/1236463291d1c80afcc20a2bfb8894c8.jpg);background-repeat:no-repeat;background-size:cover;">
+	<div id="mainSliderWrapper" class="table-responsive">
+		<div id="mainSlider" class="slick-initialized slick-slider img-responsive" style="height: 589px;background-image:url(images/1236463291d1c80afcc20a2bfb8894c8.jpg);background-repeat:no-repeat;background-size:cover;">
         </div>
     </div>
 	<!-- Slider -->
 	<!-- Content  -->
 	<div id="pageContent">
 		<!-- Under Slider Banner -->
-		<div class="block banner-under-slider" style="background-image:url(images/1.jpg);background-repeat:no-repeat;background-size:cover;">
+		<div class="block banner-under-slider img-responsive" style="background-image:url(images/1.jpg);background-repeat:no-repeat;background-size:cover;">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-8 col-md-6">
+					<div class="col-sm-8 col-md-6 table-responsive" style="overflow:hidden;border:none;">
 						<div class="row">
 							<div class="col-md-6">
 								<h2>Schedule A Booking</h2>
@@ -142,7 +135,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 col-md-6">
+					<div class="col-sm-4 col-md-6 img-responsive">
 						<div class="row">
 							<div class="col-md-6 col-lg-8">
 								<div class="negative-margin"><img src="images/banner-key.png" class="img-responsive" alt=""></div>
@@ -199,11 +192,13 @@
 				</div>
             </div>
             <div class="container">
-            	<div class="col-md-12">
+            	<div class="text-center">
                     <div class="divider"></div>
                     <div class="row">
                         <form class="contact-form form-horizontal" enctype="multipart/form-data" role="form" method="post" action="src/process.php">
-                            <h5>Contact information</h5>
+                        <div>
+                            <h5 class="text-center">Contact information</h5>
+                           </div>
                             <div>
                             	<div class="col-md-6">
                                 <input type="text" name="name" class="form-control input-custom"  title="Please enter a valid first name e.g. : John" required value="" pattern="(([A-Z])|([a-z]))+" placeholder="First name*">
@@ -274,7 +269,7 @@
 				<div class="services-block services-carousel">
 					<div class="service">
 						<div class="image">
-                        	<img src="images/service-1-bg.png" alt="#">
+                        	<img src="images/service-1-bg.png" class="img-responsive" alt="#">
                         </div>
 						<div class="caption">
 							<div class="vert-wrap">
@@ -288,11 +283,11 @@
 						</div>
 					</div>
 					<div class="service">
-                        	<img src="images/service-2-bg.jpg" alt="#">
+                        	<img src="images/service-2-bg.jpg" class="img-responsive" alt="#">
 					</div>
 					<div class="service">
 						<div class="image">
-                        	<img src="images/service-3-bg.jpg" alt="#">
+                        	<img src="images/service-3-bg.jpg" class="img-responsive" alt="#">
                         </div>
 						<div class="caption">
 							<div class="vert-wrap">
@@ -306,11 +301,11 @@
 						</div>
 					</div>
 					<div class="service">
-                        	<img src="images/service-4-bg.jpg" alt="#">
+                        	<img src="images/service-4-bg.jpg" class="img-responsive" alt="#">
 					</div>
 					<div class="service dark">
 						<div class="image">
-                        	<img src="images/service-5-bg.jpg" alt="#">
+                        	<img src="images/service-5-bg.jpg" class="img-responsive" alt="#">
                         </div>
 						<div class="caption">
 							<div class="vert-wrap">
@@ -326,15 +321,15 @@
 						</div>
 					</div>
 					<div class="service">
-                        	<img src="images/service-6-bg.jpg" alt="#">
+                        	<img src="images/service-6-bg.jpg" class="img-responsive" alt="#">
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- //Services Banner Block -->
 		<!-- Services List Block -->
-		<div class="block bg-1" style="background-image:url(images/modern-4k-car-wallpaper-in-picture-t1xy-with-4k-car-wallpaper-new-on-wallpapers.jpg);background-repeat:no-repeat;background-size:cover;padding-top:80px;margin-top:30px;" id="our-services">
-			<div class="container">
+		<div class="block bg-1 img-responsive" style="background-image:url(images/modern-4k-car-wallpaper-in-picture-t1xy-with-4k-car-wallpaper-new-on-wallpapers.jpg);background-repeat:no-repeat;background-size:cover;padding-top:80px;margin-top:30px;" id="our-services">
+			<div class="container text-center">
 				<h2 class="h-lg text-center">Our <span class="color">Services</span></h2>
 				<p class="info text-center">Below are some of the many auto repair services we offer:</p>
 				<div class="row" id="slideMobile">
@@ -380,14 +375,14 @@
 		</div>
 		<!-- //Services List Block -->
 		<!-- How It Works -->
-		<div class="block bg-2" style="background-image:url(images/2.jpg);background-repeat:no-repeat;background-size:cover;" id="how-it-works">
+		<div class="block bg-2 img-responsive" style="background-image:url(images/2.jpg);background-repeat:no-repeat;background-size:cover;" id="how-it-works">
 			<div class="container">
 				<h2 class="h-lg text-center">How It <span class="color">Works</span></h2>
 				<div class="row how-works-row shifted">
 					<div class="col-sm-6 col-md-3">
 						<div class="how-works-block">
 							<div class="image">
-								<div class="image-scale"><img src="images/how-works-img-1.jpg" alt=""></div>
+								<div class="image-scale"><img src="images/how-works-img-1.jpg" class="img-responsive" alt=""></div>
 							</div>
 							<div class="caption">
 								<div class="inside">
@@ -402,7 +397,7 @@
 					<div class="col-sm-6 col-md-3">
 						<div class="how-works-block">
 							<div class="image">
-								<div class="image-scale"><img src="images/how-works-img-2.jpg" alt=""></div>
+								<div class="image-scale"><img src="images/how-works-img-2.jpg" class="img-responsive" alt=""></div>
 							</div>
 							<div class="caption">
 								<div class="inside">
@@ -417,7 +412,7 @@
 					<div class="col-sm-6 col-md-3">
 						<div class="how-works-block">
 							<div class="image">
-								<div class="image-scale"><img src="images/how-works-img-3.jpg" alt=""></div>
+								<div class="image-scale"><img src="images/how-works-img-3.jpg" class="img-responsive" alt=""></div>
 							</div>
 							<div class="caption">
 								<div class="inside">
@@ -432,7 +427,7 @@
 					<div class="col-sm-6 col-md-3">
 						<div class="how-works-block">
 							<div class="image">
-								<div class="image-scale"><img src="images/how-works-img-4.jpg" alt=""></div>
+								<div class="image-scale"><img src="images/how-works-img-4.jpg" class="img-responsive" alt=""></div>
 							</div>
 							<div class="caption">
 								<div class="inside">
@@ -490,27 +485,29 @@
 		<div class="block">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
+					<div>
 						<div class="text-appointment">
 							<h2 class="h-lg">Schedule <span class="color">Your Appointment</span> Today</h2>
 							<p class="info">Your Automotive Service Specialist</p>
 							<h2 class="h-phone">Call: +94-711790370</h2>
 						</div>
 					</div>
-					<div class="col-md-6">
+					<div>
 						<div class="img-move animation" data-animation="fadeInRight" data-animation-delay="0s" style="animation-delay: 0s;">
 							<img src="images/img-car-move.png" alt="">
 						</div>
 					</div>
-				</div>
+				</div> 
 			</div>
 		</div>
 		<!-- //Appointment Block -->
 	</div>
 	<!-- // Content  -->
 	<!-- Footer -->
-    <div class="col-md-12 text-center" style="background-color:rgb(0,0,0);padding:15px;height:8vh;">
-        <font class="color" face="Verdana, Geneva, sans-serif">All Rights Reserved <a href="www.striking.lk" class="color">Striking Solutions</a> &copy; <?php $year = getdate(); echo $year['year']; ?></font>
+    <div class="container-fluid" style="margin:0;padding:0;">
+        <div class="text-center" style="background-color:rgb(0,0,0);padding:15px;height:8vh;">
+            <font class="color" face="Verdana, Geneva, sans-serif">All Rights Reserved <a href="www.striking.lk" class="color">Striking Solutions</a> &copy; <?php $year = getdate(); echo $year['year']; ?></font>
+        </div>
     </div>
 	<!-- //Footer -->
 	<script type="text/javascript" charset="UTF-8" src="js/common.js"></script>
