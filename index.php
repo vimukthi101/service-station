@@ -7,7 +7,7 @@
 	<meta name="description" content="service station booking web site">
 	<meta name="author" content="www.striking.lk">
 	<link rel="icon" href="">
-	<title>Service Station</title>
+	<title>Dunhinda Auto Service</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-submenu.css" rel="stylesheet">
 	<link href="css/animate.min.css" rel="stylesheet">
@@ -20,6 +20,50 @@
   	<link href="css/tools.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+		$(function() {
+			
+			$("#json-one").change(function() {
+			
+				var $dropdown = $(this);
+			
+				$.getJSON("src/data.json", function(data) {
+				
+					var key = $dropdown.val();
+					var vals = [];
+										
+					switch(key) {
+						case 'car':
+							vals = data.car.split(",");
+							break;
+						case 'van':
+							vals = data.van.split(",");
+							break;
+						case 'wheel':
+							vals = data.wheel.split(",");
+							break;
+						case 'bike':
+							vals = data.bike.split(",");
+							break;
+						case 'bus':
+							vals = data.bus.split(",");
+							break;
+						case 'base':
+							vals = ['Please choose from above'];
+					}
+					
+					var $jsontwo = $("#json-two");
+					$jsontwo.empty();
+					$.each(vals, function(index, value) {
+						$jsontwo.append("<option value="+value+">" + value + "</option>");
+					});
+			
+				});
+			});
+
+		});
+	</script>
 </head>
 
 <body class="home color-blue table-responsive">	
@@ -59,25 +103,25 @@
 			<div class="container">
 				<div class="header-row">				
                 	<div class="logo">
-                    
+                    	<div>
+                        	<img src="images/logo.png" style="width:100px;height:100px;">
+                        </div>
 					</div>
 					<div class="header-right">
-                    	<div>
+                    	<div><!--
 							<button type="button" class="navbar-toggle"><i class="icon icon-lines-menu"></i></button>
-						</div>
+						-->
+                        </div>
                         <div class="header-right-top">
 							<div class="address">
 								Monday-Saturday <span class="custom-color">8:30AM - 5:30PM</span>
 							</div>
 							<div class="appointment">
-                            	<span>SERVICE STATION</span>
+                            	<font face="eras medium ITC" size="+1"><b>Dunhinda Auto Service</b></font>
                             </div>
 						</div>
 						<div class="header-right-bottom">
-							<div class="header-phone">
-                            	<span class="text">SCHEDULE YOUR APPOINTMENT TODAY</span>
-                                <span class="phone-number">+94-711790370</span>
-							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -95,9 +139,11 @@
 								<li>
                                 	<a href="#what-we-do"><span>What We Do</span></a>
                                 </li>
+                                <!--
 								<li>
                                 	<a href="#our-services"><span>Our Services</span></a>
                                 </li>
+                                -->
 								<li>
                                 	<a href="#how-it-works"><span>How It Works</span></a>
                                 </li>
@@ -154,7 +200,7 @@
 			<div class="container">
 				<div class="text-center">
 					<h2 class="h-lg">Schedule <span class="color">Auto Service</span></h2>
-					<p class="info">To schedule an appointment with your friendly neighborhood experts at Vehicle Services, give us a call at +94-711790370 or fill out the form below with your information and preferred date and time.</p>
+					<p class="info">To schedule an appointment with your friendly neighborhood experts at Vehicle Services, give us a call at +94 632 250 616 or fill out the form below with your information and preferred date and time.</p>
 				</div>
             </div>
             <div class="container">
@@ -217,13 +263,14 @@
                             </div>
                             <div class="divider"></div>
                             <h5>Vehicle details</h5>
+                            <!--
                             <div>
                                 <div class="col-md-6">
                                     <select name="vehicle" class="form-control input-custom" required title="Please select your vehicle type">
                                         <option selected disabled>--Select your vehicle type (approximate time for each type is mentioned)--</option>
                                         <option value="car">Car (2.5 h)</option>
                                         <option value="van">Van/ SUV (2.5 h)</option>
-                                        <option value="bus">Bus (6 h)</option>
+                                        <option value="bus">Bus/ Lorries (6 h)</option>
                                         <option value="wheel">Three Wheel (1 h)</option>
                                         <option value="bike">Bike (2.5 h)</option>
                                     </select>
@@ -236,6 +283,24 @@
                                         <option value="Mazda">Mazda</option>
                                         <option value="Tata">Tata</option>
                                         <option value="Piajio">Piajio</option>
+                                    </select>
+                                </div>
+                            </div>
+                            -->
+                            <div>
+                                <div class="col-md-6">
+                                    <select name="vehicle" id="json-one" class="form-control input-custom" required title="Please select your vehicle type">
+                                        <option selected disabled>--Select your vehicle type (approximate time for each type is mentioned)--</option>
+                                        <option value="car">Car (2.5 h)</option>
+                                        <option value="van">Van/ SUV (2.5 h)</option>
+                                        <option value="bus">Bus/ Lorries (6 h)</option>
+                                        <option value="wheel">Three Wheel (1 h)</option>
+                                        <option value="bike">Bike (2.5 h)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <select id="json-two" name="model" class="form-control input-custom" required title="Please select your vehicle model">
+                                        <option selected disabled>--Please choose vehicle type first--</option>
                                     </select>
                                 </div>
                             </div>
@@ -328,6 +393,7 @@
 		</div>
 		<!-- //Services Banner Block -->
 		<!-- Services List Block -->
+        <!--
 		<div class="block bg-1 img-responsive" style="background-image:url(images/modern-4k-car-wallpaper-in-picture-t1xy-with-4k-car-wallpaper-new-on-wallpapers.jpg);background-repeat:no-repeat;background-size:cover;padding-top:80px;margin-top:30px;" id="our-services">
 			<div class="container text-center">
 				<h2 class="h-lg text-center">Our <span class="color">Services</span></h2>
@@ -373,6 +439,7 @@
 				</div>
 			</div>
 		</div>
+        -->
 		<!-- //Services List Block -->
 		<!-- How It Works -->
 		<div class="block bg-2 img-responsive" style="background-image:url(images/2.jpg);background-repeat:no-repeat;background-size:cover;" id="how-it-works">
@@ -489,7 +556,8 @@
 						<div class="text-appointment">
 							<h2 class="h-lg">Schedule <span class="color">Your Appointment</span> Today</h2>
 							<p class="info">Your Automotive Service Specialist</p>
-							<h2 class="h-phone">Call: +94-711790370</h2>
+							<h2 class="h-phone">Call: +94 632 250 616</h2>
+                            <h2 class="h-phone">370/1, Kandy Road, Uhana</h2>
 						</div>
 					</div>
 					<div>
