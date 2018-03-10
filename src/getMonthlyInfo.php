@@ -4,33 +4,12 @@ include_once('../ssi/db.php');
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-a {
-	color:rgba(255,0,0,0.5);
-}
-a:hover {
-    color:rgba(255,0,0,1);
-}
-a:visited{
-	color:rgba(255,0,0,0.5);
-}
-</style>
 </head>
 <?php
 //date
 $q = trim(htmlspecialchars(mysqli_real_escape_string($con,$_REQUEST["q"])));
-//point
-$r = trim(htmlspecialchars(mysqli_real_escape_string($con,$_REQUEST["r"])));
-if($q != "" && $r != ""){
-	if($r == "1"){
-		$query = "SELECT * FROM service_schedule WHERE DATE='".$q."' AND (vehicle_type='car' OR vehicle_type='wheel' OR vehicle_type='bike') AND POINT='1'";
-	} else if($r == "2") {
-		$query = "SELECT * FROM service_schedule WHERE DATE='".$q."' AND (vehicle_type='car' OR vehicle_type='wheel' OR vehicle_type='bike') AND POINT='2'";
-	} else if($r == "3"){
-		$query = "SELECT * FROM service_schedule WHERE DATE='".$q."' AND vehicle_type='van'";
-	} else if($r == "4"){
-		$query = "SELECT * FROM service_schedule WHERE DATE='".$q."' AND vehicle_type='bus'";
-	}
+if($q != ""){
+	$query = "SELECT * FROM service_schedule WHERE DATE like '".$q."%'";
 	$result = mysqli_query($con, $query);
 	if(mysqli_num_rows($result)!=0){
 		echo '<div>
@@ -56,10 +35,7 @@ if($q != "" && $r != ""){
 					Date
 			  	</th>
 			  	<th>
-					Start Time
-			  	</th>
-				<th>
-					End Time
+					Booked Time
 			  	</th>
 			</tr></thead><tbody>';
 		while($row = mysqli_fetch_array($result)){
@@ -71,7 +47,6 @@ if($q != "" && $r != ""){
 			$sTime_1 = $row['start_time'];
 			$vType_1 = $row['vehicle_type'];
 			$vModel_1 = $row['vehicle_model']; 
-			$eTime_1 = $row['end_time']; 
 			echo '<tr class="warning">
 				  <th>
 					'.$vNo_1.'
@@ -93,8 +68,6 @@ if($q != "" && $r != ""){
 				  </th>
 				  <th>
 					'.$sTime_1.'
-				  </th><th>
-					'.$eTime_1.'
 				  </th></tr>';
 		}
 		echo '</tbody></table></div>';

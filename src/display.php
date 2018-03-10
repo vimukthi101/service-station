@@ -1,8 +1,6 @@
 <?php
-if(!isset($_SESSION[''])){
+if(!isset($_SESSION['']))
 	session_start();
-}
-session_destroy();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -39,33 +37,17 @@ p {
 <body style="background-image:url(../images/2.jpg);background-repeat:no-repeat;background-size:cover;width:100%;">
 <div class="block bg-1 vertical-center">
     <div class="container center-block">
-        <h2 class="h-lg text-center" style="color:rgb(255,255,255);">You have added the <span class="color">booking successfully!</span></h2>
-        <p class="info text-center" style="color:rgb(255,255,255);">Please find the booking details below,</p>
-        <div class="row" id="slideMobile">
-            <div class="col-sm-4 col-md-4">
+        <h2 class="h-lg text-center" style="color:rgb(255,255,255);">Please select the view to show bookings</span></h2>
+        <div class="row col-md-12" id="slideMobile">
+            <div class="col-sm-6 col-md-6 view-more-mobile center-block">
+                <div class="text-center">
+                    <a href="timeTable.php" style="width:200px;height:200px;background-image:url(../images/dailyView.png);background-size:cover;background-color:transparent;border:none;" class="btn btn-info text-center"></a>
+                </div>
             </div>
-            <div class="col-sm-4 col-md-4 view-more-mobile">
-                <ul class="marker-list">
-                     <?php
-						if(isset($_GET['date']) && isset($_GET['time']) && isset($_GET['name']) && isset($_GET['last']) && isset($_GET['phone']) && isset($_GET['vehicle']) && isset($_GET['end'])){
-							$date = $_GET['date'];
-							$time = $_GET['time'];
-							$name = $_GET['name'];
-							$last = $_GET['last'];
-							$phone = $_GET['phone'];
-							$vehicle = $_GET['vehicle'];
-							$end = $_GET['end'];
-							echo '<p>Scheduler\'s Name : '.$name.' '.$last.'</p>';
-							echo '<p>Contact No : '.$phone.'</p>';
-							echo '<p>Vehicle No : '.$vehicle.'</p>';
-							echo '<p>Date : '.$date.'</p>';
-							echo '<p>Scheduled Time : '.$time.'</p>';
-							echo '<p>Approximate End Time : '.$end.'</p>';
-						}
-					?>
-                </ul>
-            </div>
-            <div class="col-sm-4 col-md-4 view-more-mobile">
+            <div class="col-sm-6 col-md-6 view-more-mobile center-block">
+                <div class="text-center">
+                    <a href="monthlyPreview.php" style="width:200px;height:200px;background-image:url(../images/monthlyView.png);background-size:cover;background-color:transparent;border:none;padding:0;margin:0;" class="btn btn-info text-center"></a>
+                </div>
             </div>
         </div>
         <div class="text-center">
@@ -77,3 +59,6 @@ p {
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 </body>
 </html>
+<?php
+session_destroy();
+?>

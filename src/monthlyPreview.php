@@ -131,27 +131,18 @@ body {
         <div class="col-md-12">
             <div class="col-md-5">
             	<label>Select The Date :</label>
-                <input type="date" id="date" name="date" class="form-control input-custom" required placeholder="" title="Please select a date.">
-            </div>
-            <div class="col-md-5">
-            	<label>Select The Service Point :</label>
-                <select name="point" id="point" class="form-control input-custom">
-                	<option value="1">Point 01</option>
-                    <option value="2">Point 02</option>
-                    <option value="3">Point 03</option>
-                    <option value="4">Point 04</option>
-                </select>
+                <input type="month" id="date" name="date" class="form-control input-custom" required placeholder="" title="Please select a date.">
             </div>
             <div class="col-md-2">
             	<label>&nbsp;</label>
-                <input type="button" value="Search" class="form-control input-custom btn-success" onClick="showHint(document.getElementById('date').value, document.getElementById('point').value);"/>
+                <input type="button" value="Search" class="form-control input-custom btn-success" onClick="showHint(document.getElementById('date').value);"/>
             </div>
         </div>
         </form>
     </div>
 </div>
 <script>
-function showHint(str, id) {
+function showHint(str) {
 	if (str.length == 0) { 
 		document.getElementById("txtHint").innerHTML = "";
 		return;
@@ -162,7 +153,7 @@ function showHint(str, id) {
 				document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
 			}
 		};
-		xmlhttp.open("GET", "getTimeTableInfo.php?q=" + str + "&r=" + id, true);
+		xmlhttp.open("GET", "getMonthlyInfo.php?q=" + str, true);
 		xmlhttp.send();
 	}
 }
@@ -171,7 +162,7 @@ function showHint(str, id) {
     <div style="padding:50px;margin-top:100px;" id="txtHint"></div>
 </div>
 <div class="col-md-12 text-center navbar-fixed-bottom" style="background-color:rgb(0,0,0);padding:15px;height:8vh;">
-    <font class="color" face="Verdana, Geneva, sans-serif">All Rights Reserved <a  href="http://www.striking.lk" target="_blank" class="color">Striking Solutions</a> &copy; <?php $year = getdate(); echo $year['year']; ?></font>
+    <font class="color" face="Verdana, Geneva, sans-serif">All Rights Reserved <a href="http://www.striking.lk" target="_blank" class="color">Striking Solutions</a> &copy; <?php $year = getdate(); echo $year['year']; ?></font>
 </div>
 <script type="text/javascript" charset="UTF-8" src="../js/common.js"></script>
 <script type="text/javascript" charset="UTF-8" src="../js/map.js"></script>

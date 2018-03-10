@@ -1,4 +1,7 @@
 <?php
+if(!isset($_SESSION[''])){
+	session_start();
+}
 include_once('../ssi/db.php');
 include_once('../ssi/config.php');
 if(isset($_POST['submit'])){
@@ -11,10 +14,18 @@ if(isset($_POST['submit'])){
 		$time = trim(htmlspecialchars(mysqli_real_escape_string($con,$_POST['time'])));		
 		$vehicle = trim(htmlspecialchars(mysqli_real_escape_string($con,$_POST['vehicle'])));		
 		$model = trim(htmlspecialchars(mysqli_real_escape_string($con,$_POST['model'])));	
+		$_SESSION['fName'] = $name;
+		$_SESSION['lName'] = $lastname;
+		$_SESSION['phone'] = $phone;
+		$_SESSION['vNo'] = $vehicleNo;
+		$_SESSION['date'] = $date;
+		$_SESSION['time'] = $time;
+		$_SESSION['vehicle'] = $vehicle;
+		$_SESSION['model'] = $model;
 		if(preg_match('/(([A-Z])|([a-z]))+/',$name)){
 			if(preg_match('/(([A-Z])|([a-z]))+/',$lastname)){
 				if(preg_match('/^[0-9]{10}$/',$phone)){
-					if(preg_match('/^\w+.\w+-\w+$/',$vehicleNo)){
+					if(preg_match('/^\w+-\w+$/',$vehicleNo)){
 						if($vehicle == "car" || $vehicle == "van" || $vehicle == "bus" || $vehicle == "wheel" || $vehicle == "bike"){
 							//check for the closed days
 							$day = date('w', strtotime($date));
