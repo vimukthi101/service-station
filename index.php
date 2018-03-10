@@ -1,3 +1,8 @@
+<?php
+if(!isset($_SESSION[''])){
+	session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -164,38 +169,7 @@
         </div>
     </div>
 	<!-- Slider -->
-	<!-- Content  -->
-	<div id="pageContent">
-		<!-- Under Slider Banner -->
-		<div class="block banner-under-slider img-responsive" style="background-image:url(images/1.jpg);background-repeat:no-repeat;background-size:cover;">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-8 col-md-6 table-responsive" style="overflow:hidden;border:none;">
-						<div class="row">
-							<div class="col-md-6">
-								<h2>Schedule A Booking</h2>
-								<h2 class="h-lg text-right"><span class="color">For Your Vehicle Service</span></h2>
-							</div>
-							<div class="col-md-6">
-								<p>We realize that you lead a busy life, so we've made it easy for you to schedule your service.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 col-md-6 img-responsive">
-						<div class="row">
-							<div class="col-md-6 col-lg-8">
-								<div class="negative-margin"><img src="images/banner-key.png" class="img-responsive" alt=""></div>
-							</div>
-							<div class="col-md-6 col-lg-4 action hidden-xs">
-								<a href="#schedule-appointment" class="btn btn-full btn-border appointment"><span>Schedule</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- // Under Slider Banner -->
-        <!-- Schedule Block -->
+    <!-- Schedule Block -->
 <div class="block" id="schedule-appointment" style="padding-top:70px;">
 			<div class="container">
 				<div class="text-center">
@@ -219,7 +193,7 @@
 							} else if($error == 5){
 								echo '<p style="color:rgb(255,0,0);">Please enter a valid telephone number e.g. : 0711790370</p>';
 							} else if($error == 6){
-								echo '<p style="color:rgb(255,0,0);">Please enter a valid vehicle number e.g. : WP XXX-0000</p>';
+								echo '<p style="color:rgb(255,0,0);">Please enter a valid vehicle number e.g. : XXX-0000</p>';
 							} else if($error == 7){
 								echo '<p style="color:rgb(255,0,0);">Please select a vehicle format.</p>';
 							} else if($error == 8){
@@ -247,60 +221,44 @@
                            </div>
                             <div>
                             	<div class="col-md-6">
-                                <input type="text" name="name" class="form-control input-custom"  title="Please enter a valid first name e.g. : John" required value="" pattern="(([A-Z])|([a-z]))+" placeholder="First name*">
+                                <input type="text" name="name" class="form-control input-custom"  title="Please enter a valid first name e.g. : John" required pattern="(([A-Z])|([a-z]))+" placeholder="First name*" value="<?php if(isset($_SESSION['fName'])){ echo $_SESSION['fName'];} ?>">
                                 </div>
                                 <div class="col-md-6">
-                                <input type="text" name="lastname" class="form-control input-custom" required value="" placeholder="Last name*" title="Please enter a valid last name e.g. : Doe" pattern="(([A-Z])|([a-z]))+">
+                                <input type="text" name="lastname" class="form-control input-custom" required placeholder="Last name*" title="Please enter a valid last name e.g. : Doe" pattern="(([A-Z])|([a-z]))+"  value="<?php  if(isset($_SESSION['lName'])){echo $_SESSION['lName'];} ?>">
                                 </div>
                             </div>
                             <div>
                                 <div class="col-md-6">
-                                    <input type="tel" name="phone" class="form-control input-custom" required value="" placeholder="Phone number*" title="Please enter a valid telephone number e.g. : 0711790370" pattern="^[0-9]{10}$">
+                                    <input type="tel" name="phone" class="form-control input-custom" required  value="<?php if(isset($_SESSION['phone'])){echo $_SESSION['phone'];} ?>" placeholder="Phone number*" title="Please enter a valid telephone number e.g. : 0711790370" pattern="^[0-9]{10}$">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" name="vehicleNo" class="form-control input-custom" required value="" placeholder="Vehicle number*" title="Please enter a valid vehicle number e.g. : WP XXX-0000" pattern="^\w+.\w+-\w+$">
+                                    <input type="text" name="vehicleNo" class="form-control input-custom" required  value="<?php if(isset($_SESSION['vNo'])){echo $_SESSION['vNo'];} ?>" placeholder="Vehicle number* XXX-0000" title="Please enter a valid vehicle number e.g. : XXX-0000" pattern="^\w+-\w+$">
                                 </div>
                             </div>
                             <div class="divider"></div>
                             <h5>Vehicle details</h5>
-                            <!--
-                            <div>
-                                <div class="col-md-6">
-                                    <select name="vehicle" class="form-control input-custom" required title="Please select your vehicle type">
-                                        <option selected disabled>--Select your vehicle type (approximate time for each type is mentioned)--</option>
-                                        <option value="car">Car (2.5 h)</option>
-                                        <option value="van">Van/ SUV (2.5 h)</option>
-                                        <option value="bus">Bus/ Lorries (6 h)</option>
-                                        <option value="wheel">Three Wheel (1 h)</option>
-                                        <option value="bike">Bike (2.5 h)</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6">
-                                    <select name="model" class="form-control input-custom" required title="Please select your vehicle model">
-                                        <option selected disabled>--Select your vehicle model--</option>
-                                        <option value="Bajaj">Bajaj</option>
-                                        <option value="Toyota">Toyota</option>
-                                        <option value="Mazda">Mazda</option>
-                                        <option value="Tata">Tata</option>
-                                        <option value="Piajio">Piajio</option>
-                                    </select>
-                                </div>
-                            </div>
-                            -->
                             <div>
                                 <div class="col-md-6">
                                     <select name="vehicle" id="json-one" class="form-control input-custom" required title="Please select your vehicle type">
-                                        <option selected disabled>--Select your vehicle type (approximate time for each type is mentioned)--</option>
-                                        <option value="car">Car (2.5 h)</option>
-                                        <option value="van">Van/ SUV (2.5 h)</option>
-                                        <option value="bus">Bus/ Lorries (6 h)</option>
-                                        <option value="wheel">Three Wheel (1 h)</option>
-                                        <option value="bike">Bike (2.5 h)</option>
+                                        <option <?php if(!isset($_SESSION['vehicle'])){ ?> selected <?php } ?> disabled>--Select your vehicle type (approximate time for each type is mentioned)--</option>
+                                        <option <?php if(isset($_SESSION['vehicle'])){if($_SESSION['vehicle'] == "car"){ ?> selected <?php }} ?> value="car">Car (2.5 h)</option>
+                                        <option <?php if(isset($_SESSION['vehicle'])){if($_SESSION['vehicle'] == "van"){ ?> selected <?php }} ?> value="van">Van/ SUV (2.5 h)</option>
+                                        <option <?php if(isset($_SESSION['vehicle'])){if($_SESSION['vehicle'] == "bus"){ ?> selected <?php }} ?> value="bus">Bus/ Lorries (6 h)</option>
+                                        <option <?php if(isset($_SESSION['vehicle'])){if($_SESSION['vehicle'] == "wheel"){ ?> selected <?php }} ?> value="wheel">Three Wheel (1 h)</option>
+                                        <option <?php if(isset($_SESSION['vehicle'])){if($_SESSION['vehicle'] == "bike"){ ?> selected <?php }} ?> value="bike">Bike (2.5 h)</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6">
                                     <select id="json-two" name="model" class="form-control input-custom" required title="Please select your vehicle model">
-                                        <option selected disabled>--Please choose vehicle type first--</option>
+                                        <?php
+                                        if(isset($_SESSION['model'])){
+											if(isset($_SESSION['model'])){
+												echo '<option selected value="'.$_SESSION['model'].'">'.$_SESSION['model'].'</option>';
+											}
+										} else {
+                                        	echo '<option selected disabled>--Please choose vehicle type first--</option>';
+                                        }
+                                        ?>
                                     </select>
                                 </div>
                             </div>
@@ -308,10 +266,10 @@
                             <h5>Appointment details</h5>
                             <div>
                                 <div class="col-md-6">
-                                    <input type="date" name="date" class="form-control input-custom" required placeholder="" title="Please select a date. We are closed on Sundays.">
+                                    <input type="date" name="date"  value="<?php if(isset($_SESSION['date'])){echo $_SESSION['date'];} ?>" class="form-control input-custom" required placeholder="" title="Please select a date. We are closed on Sundays.">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="time" name="time" class="form-control input-custom" required placeholder="" title="Please select a time. We are open from 08:30 AM to 05:30 PM only.">
+                                    <input type="time" name="time"  value="<?php if(isset($_SESSION['time'])){echo $_SESSION['time'];} ?>" class="form-control input-custom" required placeholder="" title="Please select a time. We are open from 08:30 AM to 05:30 PM only.">
                                 </div>
                             </div>
                             <div class="divider"></div>
@@ -324,6 +282,38 @@
 			</div>
 		</div>
 		<!-- //Schedule Block -->
+	<!-- Content  -->
+	<div id="pageContent">
+    
+		<!-- Under Slider Banner -->
+		<div class="block banner-under-slider img-responsive" style="background-image:url(images/1.jpg);background-repeat:no-repeat;background-size:cover;">
+			<div class="container center-block text-center">
+				<div class="row center-block text-center">
+					<div class="col-sm-8 col-md-6 table-responsive center-block text-center" style="overflow:hidden;border:none;">
+						<div class="row center-block text-center">
+							<div class="col-md-6">
+								<h2>Schedule A Booking</h2>
+								<h2 class="h-lg text-right"><span class="color">For Your Vehicle Service</span></h2>
+							</div>
+							<div class="col-md-6 center-block text-center">
+								<p>We realize that you lead a busy life, so we've made it easy for you to schedule your service.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-6 img-responsive">
+						<div class="row">
+							<div class="col-md-6 col-lg-8">
+								<div class="negative-margin"><img src="images/banner-key.png" class="img-responsive" alt=""></div>
+							</div>
+							<div class="col-md-6 col-lg-4 action hidden-xs">
+								<a href="#schedule-appointment" class="btn btn-full btn-border appointment"><span>Schedule</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // Under Slider Banner -->
 		<!-- Services Banner Block -->
 		<div class="block" id="what-we-do" style="padding-top:70px;padding-bottom:30px;">
 			<div class="container">
@@ -375,12 +365,7 @@
 						<div class="caption">
 							<div class="vert-wrap">
 								<div class="vert">
-									<h3>Brake</h3>
-									<h2>Repair &amp; Service</h2>
-									<div class="text">Brake maintenance is important
-										<br> in helping ensure the safety of you
-										<br> and your passengers
-									</div>
+									
 								</div>
 							</div>
 						</div>
@@ -574,7 +559,7 @@
 	<!-- Footer -->
     <div class="container-fluid" style="margin:0;padding:0;">
         <div class="text-center" style="background-color:rgb(0,0,0);padding:15px;height:8vh;">
-            <font class="color" face="Verdana, Geneva, sans-serif">All Rights Reserved <a href="www.striking.lk" class="color">Striking Solutions</a> &copy; <?php $year = getdate(); echo $year['year']; ?></font>
+            <font class="color" face="Verdana, Geneva, sans-serif">All Rights Reserved <a  href="http://www.striking.lk" target="_blank" class="color">Striking Solutions</a> &copy; <?php $year = getdate(); echo $year['year']; ?></font>
         </div>
     </div>
 	<!-- //Footer -->

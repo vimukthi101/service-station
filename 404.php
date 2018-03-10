@@ -13,6 +13,7 @@
 	<div class="col-md-12">
         <img src="images/404.png" class="img-responsive center-block" style="padding:50px;margin-top:100px;"/>
         <?php
+			session_destroy();
 			header("Refresh: 5; URL=index.php");
 		?>
     </div>

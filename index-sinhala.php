@@ -509,7 +509,7 @@
 	<!-- // Content  -->
 	<!-- Footer -->
     <div class="col-md-12 text-center" style="background-color:rgb(0,0,0);padding:15px;height:8vh;">
-        <font class="color" face="Verdana, Geneva, sans-serif">All Rights Reserved <a href="www.striking.lk" class="color">Striking Solutions</a> &copy; <?php $year = getdate(); echo $year['year']; ?></font>
+        <font class="color" face="Verdana, Geneva, sans-serif">All Rights Reserved <a  href="http://www.striking.lk" target="_blank" class="color">Striking Solutions</a> &copy; <?php $year = getdate(); echo $year['year']; ?></font>
     </div>
 	<!-- //Footer -->
 	<script type="text/javascript" charset="UTF-8" src="js/common.js"></script>
